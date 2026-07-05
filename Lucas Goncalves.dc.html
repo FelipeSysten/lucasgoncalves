@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="./image-slot.js"></script>
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#050505; }
+  ::-webkit-scrollbar{ width:0; height:0; }
+  @keyframes lgMenuIn{ from{ transform:translateX(100%); } to{ transform:translateX(0); } }
+  @keyframes lgFade{ from{ opacity:0; } to{ opacity:1; } }
+  @keyframes lgUp{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:translateY(0); } }
+  image-slot{ display:block; }
+</style>
+</helmet>
+
+<div style="max-width:440px; margin:0 auto; position:relative; min-height:100vh; background:#0A0908; color:#fff; font-family:'Outfit',sans-serif; overflow:hidden;">
+
+  <!-- ===================== HEADER ===================== -->
+  <header style="position:sticky; top:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:14px 18px; background:linear-gradient(180deg,#0A0908 60%,rgba(10,9,8,0.0)); backdrop-filter:blur(2px);">
+    <div style="display:flex; align-items:center; gap:10px; cursor:pointer;" data-id="home" onClick="{{ onItemClick }}">
+      <img src="assets/g-mark.png" alt="G" style="height:34px; width:auto; display:block;">
+      <div style="line-height:1; white-space:nowrap;">
+        <div style="font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.2px; font-size:15px; color:#fff;">LUCAS <span style="color:#C9A227;">GONÇALVES</span></div>
+        <div style="font-family:'Oswald',sans-serif; font-weight:300; letter-spacing:3.5px; font-size:8px; color:#8A8A8A; margin-top:3px;">PERSONAL TRAINER</div>
+      </div>
+    </div>
+    <button onClick="{{ openMenu }}" style="background:none; border:none; padding:6px; cursor:pointer; color:#C9A227; display:flex;">
+      <i data-lucide="menu" width="26" height="26"></i>
+    </button>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section style="position:relative; min-height:620px; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; margin-top:-72px; padding-top:72px;">
+    <img src="assets/g-mark.png" alt="" style="position:absolute; top:60px; left:-70px; width:400px; opacity:0.14; filter:saturate(1.1); pointer-events:none; z-index:1;">
+    <img src="assets/lucas-hero.png" alt="Lucas Gonçalves" style="position: absolute; left: 296px; transform: translateX(-50%); height: 719px; width: 411px; max-width: none; z-index: 1; pointer-events: none; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.6)); top: -114px">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,9,8,0.55) 0%,rgba(10,9,8,0.15) 30%,rgba(10,9,8,0.7) 72%,#0A0908 100%); z-index:2; pointer-events:none;"></div>
+    <div style="position:relative; z-index:3; padding:0 22px 30px;">
+      <h1 style="margin:0; font-family:'Oswald',sans-serif; font-weight:700; font-size:54px; line-height:0.92; letter-spacing:0.5px;">
+        <span style="display:block; background:linear-gradient(135deg,#F3DD8E,#C9A227 55%,#8C6D1A); -webkit-background-clip:text; background-clip:text; color:transparent;">LUCAS</span>
+        <span style="display:block; background:linear-gradient(180deg,#ffffff,#9a9a9a); -webkit-background-clip:text; background-clip:text; color:transparent;">GONÇALVES</span>
+      </h1>
+      <div style="margin:14px 0 22px; font-family:'Oswald',sans-serif; font-weight:400; letter-spacing:2px; font-size:13px; color:#D8D2C7;">PERFORMANCE&nbsp;&nbsp;•&nbsp;&nbsp;HIPERTROFIA&nbsp;&nbsp;•&nbsp;&nbsp;RESULTADOS</div>
+      <button data-id="programas" onClick="{{ onItemClick }}" style="display:flex; align-items:center; justify-content:space-between; gap:14px; width:100%; padding:16px 22px; background:rgba(10,9,8,0.5); border:1.5px solid #C9A227; border-radius:6px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:14px; cursor:pointer;">
+        CONHECER SERVIÇOS
+        <i data-lucide="arrow-right" width="18" height="18" style="color:#C9A227;"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== NOSSOS SERVIÇOS ===================== -->
+  <section style="padding:46px 18px 10px; text-align:center;">
+    <h2 style="margin:0; font-family:'Oswald',sans-serif; font-weight:700; font-size:30px; letter-spacing:1px;">NOSSOS <span style="color:#C9A227;">SERVIÇOS</span></h2>
+    <p style="margin:10px auto 28px; max-width:300px; font-family:'Oswald',sans-serif; font-weight:400; letter-spacing:1px; font-size:12px; color:#9A958B; line-height:1.6;">ACOMPANHAMENTO PROFISSIONAL<br>PARA QUEM BUSCA <span style="color:#C9A227;">RESULTADOS DE VERDADE.</span></p>
+
+    <!-- Card: Consultoria -->
+    <div data-id="consultoria" onClick="{{ onItemClick }}" style="display:flex; align-items:stretch; gap:0; background:linear-gradient(135deg,#16130d,#0c0a07); border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; margin-bottom:16px; text-align:left; cursor:pointer;">
+      <img src="assets/svc-consultoria.png" alt="Consultoria online" style="width:140px; flex:none; align-self:stretch; min-height:150px; object-fit:cover; object-position:50% 18%; display:block;">
+      <div style="padding:18px 16px; flex:1;">
+        <i data-lucide="smartphone" width="22" height="22" style="color:#C9A227;"></i>
+        <h3 style="margin:8px 0 6px; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">CONSULTORIA <span style="color:#C9A227;">ONLINE</span></h3>
+        <p style="margin:0 0 12px; font-size:12.5px; color:#A9A399; line-height:1.5;">Treino de qualquer lugar com acompanhamento individualizado.</p>
+        <span style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.5px; color:#C9A227; display:inline-flex; align-items:center; gap:6px;">SAIBA MAIS <i data-lucide="arrow-right" width="14" height="14"></i></span>
+      </div>
+    </div>
+
+    <!-- Card: Personal Presencial -->
+    <div data-id="personalpresencial" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; margin-bottom:16px; text-align:left; cursor:pointer; min-height:148px;">
+      <img src="assets/svc-personal.png" alt="Personal presencial" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 38%;">
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg,rgba(10,9,8,0.35),rgba(10,9,8,0.92) 55%);"></div>
+      <div style="position:relative; padding:18px 16px 18px 50%;">
+        <i data-lucide="dumbbell" width="22" height="22" style="color:#C9A227;"></i>
+        <h3 style="margin:8px 0 6px; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">PERSONAL <span style="color:#C9A227;">PRESENCIAL</span></h3>
+        <p style="margin:0 0 12px; font-size:12.5px; color:#C3BDB2; line-height:1.5;">Treine com supervisão profissional e tenha segurança em cada exercício.</p>
+        <span style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.5px; color:#C9A227; display:inline-flex; align-items:center; gap:6px;">SAIBA MAIS <i data-lucide="arrow-right" width="14" height="14"></i></span>
+      </div>
+    </div>
+
+    <!-- Card: Avaliação Física -->
+    <div data-id="avaliacao" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; margin-bottom:16px; text-align:left; cursor:pointer; min-height:148px;">
+      <img src="assets/svc-avaliacao.png" alt="Avaliação física" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 18%;">
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg,rgba(10,9,8,0.3),rgba(10,9,8,0.92) 52%);"></div>
+      <div style="position:relative; padding:18px 16px 18px 48%;">
+        <i data-lucide="clipboard-list" width="22" height="22" style="color:#C9A227;"></i>
+        <h3 style="margin:8px 0 6px; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">AVALIAÇÃO <span style="color:#C9A227;">FÍSICA</span></h3>
+        <p style="margin:0 0 12px; font-size:12.5px; color:#C3BDB2; line-height:1.5;">Análise completa da sua composição corporal para um plano 100% personalizado.</p>
+        <span style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.5px; color:#C9A227; display:inline-flex; align-items:center; gap:6px;">SAIBA MAIS <i data-lucide="arrow-right" width="14" height="14"></i></span>
+      </div>
+    </div>
+
+    <!-- Card: Nutricional (Em breve) -->
+    <div data-id="nutricional" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:0; background:linear-gradient(135deg,#141414,#0a0a0a); border:1px solid rgba(201,162,39,0.20); border-radius:14px; overflow:hidden; margin-bottom:16px; text-align:left; cursor:pointer; min-height:142px;">
+      <div style="width:130px; flex:none; align-self:stretch; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+        <img src="assets/svc-nutricional.png" alt="Atendimento nutricional" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 18%;">
+        <div style="position:absolute; inset:0; background:rgba(10,9,8,0.55);"></div>
+        <div style="position:relative; width:62px; height:62px; border-radius:50%; background:linear-gradient(135deg,#1f1c14,#0c0a06); border:1px solid rgba(201,162,39,0.35); display:flex; align-items:center; justify-content:center;">
+          <i data-lucide="lock" width="26" height="26" style="color:#C9A227;"></i>
+        </div>
+      </div>
+      <div style="padding:16px; flex:1;">
+        <h3 style="margin:0 0 6px; font-family:'Oswald',sans-serif; font-weight:600; font-size:17px; letter-spacing:0.5px;">ATENDIMENTO<br><span style="color:#C9A227;">NUTRICIONAL ONLINE</span></h3>
+        <p style="margin:0 0 12px; font-size:12px; color:#A9A399; line-height:1.5;">Em breve: a nutrição certa para potencializar seus resultados.</p>
+        <span style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.5px; color:#C9A227; display:inline-flex; align-items:center; gap:6px;">EM BREVE <i data-lucide="arrow-right" width="14" height="14"></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFERTA 6 MESES ===================== -->
+  <section style="padding:24px 18px 30px;">
+    <div style="background:linear-gradient(160deg,#15120b,#0a0806); border:1px solid rgba(201,162,39,0.30); border-radius:16px; padding:20px; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+      <div style="display:flex; gap:14px; align-items:flex-start;">
+        <img src="assets/oferta-texto.png" alt="6 meses de treino por R$97" style="width:118px; height:150px; flex:none; border-radius:10px; object-fit:cover; object-position:50% 50%; display:block;">
+        <div style="flex:1;">
+          <h2 style="margin:0; font-family:'Oswald',sans-serif; font-weight:700; font-style:italic; font-size:25px; line-height:0.96; letter-spacing:0.5px; background:linear-gradient(135deg,#F3DD8E,#C9A227 55%,#8C6D1A); -webkit-background-clip:text; background-clip:text; color:transparent;">6 MESES DE TREINO EXCLUSIVO</h2>
+          <p style="margin:8px 0 0; font-size:12px; color:#A9A399; line-height:1.5;">Para você. Treino individualizado, progressão planejada e acompanhamento direto por 6 meses.</p>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:space-around; gap:6px; margin:18px 0 16px; padding:0 2px;">
+        <div style="text-align:center; flex:1;">
+          <i data-lucide="calendar-check" width="22" height="22" style="color:#C9A227;"></i>
+          <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:9.5px; letter-spacing:1px; color:#CFC9BE; margin-top:6px; line-height:1.3;">6 MESES<br>DE TREINO</div>
+        </div>
+        <div style="text-align:center; flex:1;">
+          <i data-lucide="trending-up" width="22" height="22" style="color:#C9A227;"></i>
+          <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:9.5px; letter-spacing:1px; color:#CFC9BE; margin-top:6px; line-height:1.3;">PROGRESSÃO<br>PLANEJADA</div>
+        </div>
+        <div style="text-align:center; flex:1;">
+          <i data-lucide="smartphone" width="22" height="22" style="color:#C9A227;"></i>
+          <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:9.5px; letter-spacing:1px; color:#CFC9BE; margin-top:6px; line-height:1.3;">ACESSO<br>NO APP</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:10px; align-items:stretch;">
+        <div style="flex:none; width:110px; border:1.5px solid #C9A227; border-radius:8px; padding:8px 6px; text-align:center; background:rgba(201,162,39,0.06);">
+          <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:9px; letter-spacing:2px; color:#9A958B;">APENAS</div>
+          <div style="font-family:'Oswald',sans-serif; font-weight:700; font-size:28px; line-height:1; color:#C9A227;">R$97</div>
+        </div>
+        <button data-id="oferta" onClick="{{ onItemClick }}" style="flex:1; background:linear-gradient(135deg,#C9A227,#9A7B1B); border:none; border-radius:8px; color:#0A0908; font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:1px; font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
+          QUERO MEU ACESSO <i data-lucide="arrow-right" width="16" height="16"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTADOS REAIS ===================== -->
+  <section style="padding:8px 18px 36px;">
+    <h2 style="margin:0 0 18px; font-family:'Oswald',sans-serif; font-weight:700; font-size:26px; letter-spacing:1px;">RESULTADOS <span style="color:#C9A227;">REAIS</span></h2>
+    <div style="display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:18px;">
+      <img src="assets/resultado-1.png" alt="Antes e depois" style="width:100%; height:auto; aspect-ratio:1800/873; object-fit:cover; border-radius:10px; display:block; border:1px solid rgba(201,162,39,0.25);">
+      <img src="assets/resultado-2.png" alt="Antes e depois" style="width:100%; height:auto; aspect-ratio:1800/873; object-fit:cover; border-radius:10px; display:block; border:1px solid rgba(201,162,39,0.25);">
+    </div>
+    <button data-id="resultados" onClick="{{ onItemClick }}" style="width:100%; padding:15px; background:rgba(10,9,8,0.5); border:1.5px solid #C9A227; border-radius:8px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;">
+      VER MAIS RESULTADOS <i data-lucide="arrow-right" width="16" height="16" style="color:#C9A227;"></i>
+    </button>
+  </section>
+
+  <!-- ===================== SOBRE MIM ===================== -->
+  <section style="padding:8px 18px 36px;">
+    <h2 style="margin:0 0 16px; font-family:'Oswald',sans-serif; font-weight:700; font-size:26px; letter-spacing:1px;">SOBRE <span style="color:#C9A227;">MIM</span></h2>
+    <img src="assets/sobre.png" alt="Lucas Gonçalves" style="width:100%; height:230px; margin-bottom:18px; object-fit:cover; object-position:50% 18%; border-radius:12px; display:block; border:1px solid rgba(201,162,39,0.25);">
+    <p style="margin:0 0 14px; font-size:14px; color:#BDB7AC; line-height:1.65;">Sou <strong style="color:#fff; font-weight:600;">Lucas Gonçalves</strong>, personal trainer e especialista em hipertrofia, emagrecimento e performance.</p>
+    <p style="margin:0 0 20px; font-size:14px; color:#BDB7AC; line-height:1.65;">Meu objetivo é entregar mais do que treinos: é transformar vidas através de método, disciplina e acompanhamento individualizado.</p>
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <i data-lucide="users" width="26" height="26" style="color:#C9A227;"></i>
+        <div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.5px;"><span style="color:#C9A227;">+500</span> ALUNOS</div><div style="font-family:'Oswald',sans-serif; font-weight:400; font-size:11px; letter-spacing:1px; color:#8A857B;">TRANSFORMADOS</div></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <i data-lucide="award" width="26" height="26" style="color:#C9A227;"></i>
+        <div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.5px; color:#C9A227;">EXPERIÊNCIA</div><div style="font-family:'Oswald',sans-serif; font-weight:400; font-size:11px; letter-spacing:1px; color:#8A857B;">COMPROVADA</div></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <i data-lucide="user-check" width="26" height="26" style="color:#C9A227;"></i>
+        <div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.5px; color:#C9A227;">ATENDIMENTO</div><div style="font-family:'Oswald',sans-serif; font-weight:400; font-size:11px; letter-spacing:1px; color:#8A857B;">INDIVIDUALIZADO</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section style="padding:8px 18px 36px;">
+    <h2 style="margin:0 0 16px; font-family:'Oswald',sans-serif; font-weight:700; font-size:26px; letter-spacing:1px;">DEPOIMENTOS</h2>
+    <div style="background:linear-gradient(135deg,#16130d,#0c0a07); border:1px solid rgba(201,162,39,0.28); border-radius:14px; padding:18px;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <image-slot id="lg-dep-1" style="width:48px; height:48px; flex:none;" shape="circle" fit="cover" placeholder="Foto"></image-slot>
+        <div style="color:#C9A227; font-size:13px; letter-spacing:2px;">★★★★★</div>
+      </div>
+      <p style="margin:0 0 14px; font-size:13.5px; color:#C3BDB2; line-height:1.6; font-style:italic;">"O acompanhamento do Lucas fez toda a diferença. Consegui resultados que nunca imaginei em tão pouco tempo!"</p>
+      <div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;">Juliana M.</div>
+      <div style="font-size:11px; color:#8A857B;">Aluna da Consultoria Online</div>
+      <div style="display:flex; gap:7px; justify-content:center; margin-top:16px;">
+        <span style="width:7px; height:7px; border-radius:50%; background:#C9A227;"></span>
+        <span style="width:7px; height:7px; border-radius:50%; background:#3a352b;"></span>
+        <span style="width:7px; height:7px; border-radius:50%; background:#3a352b;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTAGRAM ===================== -->
+  <section style="padding:8px 18px 36px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+      <div style="width:50px; height:50px; flex:none; border-radius:14px; background:linear-gradient(135deg,#3a2a12,#c9a227); display:flex; align-items:center; justify-content:center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0A0908" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      </div>
+      <div>
+        <div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:16px; letter-spacing:0.5px;">ME SIGA NO INSTAGRAM</div>
+        <div style="font-size:12px; color:#A9A399;">Conteúdos diários sobre treino, dieta e performance.</div>
+      </div>
+    </div>
+    <div style="font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1px; font-size:13px; color:#C9A227; margin-bottom:14px;">@lucasgoncalves.personal</div>
+    <button style="width:100%; padding:14px; background:transparent; border:1.5px solid rgba(201,162,39,0.5); border-radius:8px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:12px; cursor:pointer;">IR PARA O INSTAGRAM</button>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="padding:30px 18px 36px; text-align:center; border-top:1px solid rgba(201,162,39,0.18);">
+    <img src="assets/logo.png" alt="Lucas Gonçalves" style="width:150px; height:auto; margin:0 auto 8px; display:block; border-radius:8px;">
+    <div style="font-family:'Oswald',sans-serif; font-weight:400; letter-spacing:1.5px; font-size:11px; color:#9A958B; margin-bottom:18px;">Performance &nbsp;•&nbsp; Hipertrofia &nbsp;•&nbsp; Resultados</div>
+    <div style="display:flex; gap:14px; justify-content:center; margin-bottom:22px;">
+      <span style="width:40px; height:40px; border-radius:50%; border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; color:#C9A227;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></span>
+      <span style="width:40px; height:40px; border-radius:50%; border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; color:#C9A227;"><i data-lucide="message-circle" width="18" height="18"></i></span>
+    </div>
+    <div style="font-size:10.5px; color:#6E6A60; line-height:1.6;">© 2024 Lucas Gonçalves<br>Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- ===================== SLIDE-OUT MENU ===================== -->
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; inset:0; z-index:60; display:flex; justify-content:flex-end;">
+      <div onClick="{{ closeMenu }}" style="position:absolute; inset:0; background:rgba(0,0,0,0.6); animation:lgFade 0.2s ease;"></div>
+      <div style="position:relative; width:300px; max-width:86%; height:100%; background:#0A0908; border-left:1px solid rgba(201,162,39,0.25); padding:18px 20px; overflow-y:auto; animation:lgMenuIn 0.28s cubic-bezier(0.4,0,0.2,1);">
+        <div style="display:flex; justify-content:flex-end; margin-bottom:18px;">
+          <button onClick="{{ closeMenu }}" style="background:none; border:none; color:#C9A227; cursor:pointer; display:flex;"><i data-lucide="x" width="26" height="26"></i></button>
+        </div>
+        <nav style="display:flex; flex-direction:column; gap:2px;">
+          <a data-id="home" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:12px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:14px; color:#fff;"><i data-lucide="home" width="20" height="20" style="color:#C9A227;"></i> HOME</a>
+          <div onClick="{{ toggleServicos }}" style="display:flex; align-items:center; justify-content:space-between; padding:12px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:14px; color:#C9A227;">
+            <span style="display:flex; align-items:center; gap:14px;"><i data-lucide="dumbbell" width="20" height="20"></i> SERVIÇOS</span>
+            <i data-lucide="chevron-down" width="18" height="18"></i>
+          </div>
+          <sc-if value="{{ servicosOpen }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex; flex-direction:column; gap:2px; padding-left:8px; border-left:1px solid rgba(201,162,39,0.2); margin-left:14px;">
+              <a data-id="consultoria" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:11px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:400; letter-spacing:1.5px; font-size:13px; color:#D8D2C7;"><i data-lucide="smartphone" width="18" height="18" style="color:#C9A227;"></i> CONSULTORIA ONLINE</a>
+              <a data-id="personalpresencial" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:11px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:400; letter-spacing:1.5px; font-size:13px; color:#D8D2C7;"><i data-lucide="dumbbell" width="18" height="18" style="color:#C9A227;"></i> PERSONAL PRESENCIAL</a>
+              <a data-id="avaliacao" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:11px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:400; letter-spacing:1.5px; font-size:13px; color:#D8D2C7;"><i data-lucide="activity" width="18" height="18" style="color:#C9A227;"></i> AVALIAÇÃO FÍSICA</a>
+              <a data-id="oferta" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:11px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:400; letter-spacing:1.5px; font-size:13px; color:#D8D2C7;"><i data-lucide="flame" width="18" height="18" style="color:#C9A227;"></i> OFERTA 6 MESES</a>
+            </div>
+          </sc-if>
+          <a data-id="programas" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:12px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:14px; color:#fff;"><i data-lucide="layout-grid" width="20" height="20" style="color:#C9A227;"></i> PROGRAMAS</a>
+          <a data-id="resultados" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:12px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:14px; color:#fff;"><i data-lucide="bar-chart-3" width="20" height="20" style="color:#C9A227;"></i> RESULTADOS</a>
+          <a data-id="sobre" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:12px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:14px; color:#fff;"><i data-lucide="user" width="20" height="20" style="color:#C9A227;"></i> SOBRE</a>
+          <a data-id="contato" onClick="{{ onItemClick }}" style="display:flex; align-items:center; gap:14px; padding:12px 6px; cursor:pointer; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:14px; color:#fff;"><i data-lucide="message-circle" width="20" height="20" style="color:#C9A227;"></i> CONTATO</a>
+        </nav>
+        <button data-id="contato" onClick="{{ onItemClick }}" style="margin-top:22px; width:100%; padding:14px; background:transparent; border:1.5px solid #C9A227; border-radius:10px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;">FALE COMIGO <i data-lucide="message-circle" width="18" height="18" style="color:#C9A227;"></i></button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===================== PROGRAMAS SCREEN ===================== -->
+  <sc-if value="{{ showProgramas }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; inset:0; left:50%; transform:translateX(-50%); width:100%; max-width:440px; z-index:55; background:#0A0908; overflow-y:auto; animation:lgFade 0.25s ease;">
+      <header style="position:sticky; top:0; z-index:5; display:flex; align-items:center; justify-content:space-between; padding:14px 18px; background:#0A0908; border-bottom:1px solid rgba(201,162,39,0.18);">
+        <div style="display:flex; align-items:center; gap:10px; cursor:pointer;" data-id="home" onClick="{{ onItemClick }}">
+          <img src="assets/g-mark.png" alt="G" style="height:32px;">
+          <div style="line-height:1;"><div style="font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:14px;">LUCAS <span style="color:#C9A227;">GONÇALVES</span></div><div style="font-family:'Oswald',sans-serif; font-weight:300; letter-spacing:4px; font-size:7.5px; color:#8A8A8A;">PERSONAL TRAINER</div></div>
+        </div>
+        <button onClick="{{ openMenu }}" style="background:none; border:none; color:#C9A227; cursor:pointer; display:flex;"><i data-lucide="menu" width="26" height="26"></i></button>
+      </header>
+
+      <div style="text-align:center; padding:34px 20px 8px;">
+        <div style="font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:5px; font-size:11px; color:#C9A227; margin-bottom:8px;">— PROGRAMAS —</div>
+        <h1 style="margin:0; font-family:'Oswald',sans-serif; font-weight:700; font-size:34px; line-height:1.02; letter-spacing:0.5px;">ESCOLHA O<br><span style="background:linear-gradient(135deg,#F3DD8E,#C9A227 55%,#8C6D1A); -webkit-background-clip:text; background-clip:text; color:transparent;">SEU CAMINHO.</span></h1>
+        <img src="assets/g-mark.png" alt="" style="height:30px; opacity:0.85; margin:14px auto 0; display:block;">
+        <p style="margin:16px auto 0; max-width:320px; font-size:13px; color:#A9A399; line-height:1.6;">Programas completos e personalizados para te levar do ponto onde você está até o corpo e a vida que você merece.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:14px; padding:24px 18px 8px;">
+        <!-- program cards injected -->
+        <div data-id="fitslim" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; min-height:120px; display:flex; cursor:pointer;">
+          <img src="assets/prog-fitslim.png" alt="Fit Slim" style="width:118px; flex:none; align-self:stretch; object-fit:cover; object-position:70% 20%; display:block;">
+          <div style="flex:1; padding:16px 16px 16px 14px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#1f1c14,#0c0a06); border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:8px;"><i data-lucide="flame" width="20" height="20" style="color:#C9A227;"></i></div>
+            <h3 style="margin:0; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">FIT SLIM</h3>
+            <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:10px; letter-spacing:1.5px; color:#C9A227; margin:2px 0 8px;">EMAGRECIMENTO</div>
+            <span style="font-size:12px; color:#C9A227; display:inline-flex; align-items:center; gap:5px;">Saiba mais <i data-lucide="arrow-right" width="13" height="13"></i></span>
+          </div>
+        </div>
+        <div data-id="gluteoprotocol" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; min-height:120px; display:flex; cursor:pointer;">
+          <img src="assets/prog-gluteo.png" alt="Glúteo Protocol" style="width:118px; flex:none; align-self:stretch; object-fit:cover; object-position:72% 40%; display:block;">
+          <div style="flex:1; padding:16px 16px 16px 14px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#1f1c14,#0c0a06); border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:8px;"><i data-lucide="heart" width="20" height="20" style="color:#C9A227;"></i></div>
+            <h3 style="margin:0; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">GLÚTEO PROTOCOL</h3>
+            <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:10px; letter-spacing:1.5px; color:#C9A227; margin:2px 0 8px;">CRESCIMENTO E DEFINIÇÃO</div>
+            <span style="font-size:12px; color:#C9A227; display:inline-flex; align-items:center; gap:5px;">Saiba mais <i data-lucide="arrow-right" width="13" height="13"></i></span>
+          </div>
+        </div>
+        <div data-id="gorilla" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; min-height:120px; display:flex; cursor:pointer;">
+          <img src="assets/prog-gorilla.png" alt="Gorilla Strength" style="width:118px; flex:none; align-self:stretch; object-fit:cover; object-position:72% 20%; display:block;">
+          <div style="flex:1; padding:16px 16px 16px 14px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#1f1c14,#0c0a06); border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:8px;"><i data-lucide="dumbbell" width="20" height="20" style="color:#C9A227;"></i></div>
+            <h3 style="margin:0; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">GORILLA STRENGTH</h3>
+            <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:10px; letter-spacing:1.5px; color:#C9A227; margin:2px 0 8px;">GANHO DE FORÇA</div>
+            <span style="font-size:12px; color:#C9A227; display:inline-flex; align-items:center; gap:5px;">Saiba mais <i data-lucide="arrow-right" width="13" height="13"></i></span>
+          </div>
+        </div>
+        <div data-id="pump100" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; min-height:120px; display:flex; cursor:pointer;">
+          <img src="assets/prog-pump100.png" alt="Pump 100" style="width:118px; flex:none; align-self:stretch; object-fit:cover; object-position:68% 18%; display:block;">
+          <div style="flex:1; padding:16px 16px 16px 14px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#1f1c14,#0c0a06); border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:8px;"><i data-lucide="zap" width="20" height="20" style="color:#C9A227;"></i></div>
+            <h3 style="margin:0; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">PUMP 100</h3>
+            <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:10px; letter-spacing:1.5px; color:#C9A227; margin:2px 0 8px;">HIPERTROFIA</div>
+            <span style="font-size:12px; color:#C9A227; display:inline-flex; align-items:center; gap:5px;">Saiba mais <i data-lucide="arrow-right" width="13" height="13"></i></span>
+          </div>
+        </div>
+        <div data-id="consultoriapremium" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; min-height:120px; display:flex; cursor:pointer;">
+          <img src="assets/prog-premium.png" alt="Consultoria Premium" style="width:118px; flex:none; align-self:stretch; object-fit:cover; object-position:65% 45%; display:block;">
+          <div style="flex:1; padding:16px 16px 16px 14px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#1f1c14,#0c0a06); border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:8px;"><i data-lucide="smartphone" width="20" height="20" style="color:#C9A227;"></i></div>
+            <h3 style="margin:0; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">CONSULTORIA PREMIUM</h3>
+            <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:10px; letter-spacing:1.5px; color:#C9A227; margin:2px 0 8px;">ONLINE</div>
+            <span style="font-size:12px; color:#C9A227; display:inline-flex; align-items:center; gap:5px;">Saiba mais <i data-lucide="arrow-right" width="13" height="13"></i></span>
+          </div>
+        </div>
+        <div data-id="personalpresencial" onClick="{{ onItemClick }}" style="position:relative; border:1px solid rgba(201,162,39,0.28); border-radius:14px; overflow:hidden; min-height:120px; display:flex; cursor:pointer;">
+          <img src="assets/prog-presencial.png" alt="Personal Presencial" style="width:118px; flex:none; align-self:stretch; object-fit:cover; object-position:70% 45%; display:block;">
+          <div style="flex:1; padding:16px 16px 16px 14px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#1f1c14,#0c0a06); border:1px solid rgba(201,162,39,0.4); display:flex; align-items:center; justify-content:center; margin-bottom:8px;"><i data-lucide="map-pin" width="20" height="20" style="color:#C9A227;"></i></div>
+            <h3 style="margin:0; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;">PERSONAL PRESENCIAL</h3>
+            <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:10px; letter-spacing:1.5px; color:#C9A227; margin:2px 0 8px;">ATENDIMENTO EXCLUSIVO</div>
+            <span style="font-size:12px; color:#C9A227; display:inline-flex; align-items:center; gap:5px;">Saiba mais <i data-lucide="arrow-right" width="13" height="13"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- features strip -->
+      <div style="margin:18px 14px 40px; border:1px solid rgba(201,162,39,0.25); border-radius:16px; padding:22px 16px; display:grid; grid-template-columns:1fr 1fr; gap:24px 14px;">
+        <div style="display:flex; gap:12px; align-items:flex-start;"><i data-lucide="users" width="22" height="22" style="color:#C9A227; flex:none;"></i><div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; line-height:1.3;">TREINOS PERSONALIZADOS</div></div></div>
+        <div style="display:flex; gap:12px; align-items:flex-start;"><i data-lucide="utensils" width="22" height="22" style="color:#C9A227; flex:none;"></i><div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; line-height:1.3;">ACOMPANHAMENTO NUTRICIONAL</div></div></div>
+        <div style="display:flex; gap:12px; align-items:flex-start;"><i data-lucide="calendar" width="22" height="22" style="color:#C9A227; flex:none;"></i><div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; line-height:1.3;">AJUSTES SEMANAIS</div></div></div>
+        <div style="display:flex; gap:12px; align-items:flex-start;"><i data-lucide="headphones" width="22" height="22" style="color:#C9A227; flex:none;"></i><div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; line-height:1.3;">SUPORTE DIRETO</div></div></div>
+        <div style="display:flex; gap:12px; align-items:flex-start;"><i data-lucide="smartphone" width="22" height="22" style="color:#C9A227; flex:none;"></i><div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; line-height:1.3;">APLICATIVO EXCLUSIVO</div></div></div>
+        <div style="display:flex; gap:12px; align-items:flex-start;"><i data-lucide="trending-up" width="22" height="22" style="color:#C9A227; flex:none;"></i><div><div style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; line-height:1.3;">RESULTADOS REAIS</div></div></div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===================== DETAIL SCREEN ===================== -->
+  <sc-if value="{{ showDetail }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; inset:0; left:50%; transform:translateX(-50%); width:100%; max-width:440px; z-index:55; background:#0A0908; overflow-y:auto; animation:lgFade 0.25s ease;">
+      <header style="position:sticky; top:0; z-index:5; display:flex; align-items:center; justify-content:space-between; padding:14px 18px; background:#0A0908; border-bottom:1px solid rgba(201,162,39,0.18);">
+        <button onClick="{{ back }}" style="background:none; border:none; color:#C9A227; cursor:pointer; display:flex; align-items:center; gap:8px; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:13px;"><i data-lucide="arrow-left" width="20" height="20"></i> VOLTAR</button>
+        <button onClick="{{ openMenu }}" style="background:none; border:none; color:#C9A227; cursor:pointer; display:flex;"><i data-lucide="menu" width="24" height="24"></i></button>
+      </header>
+
+      <image-slot id="lg-detail-hero" style="width:100%; height:240px;" shape="rect" fit="cover" placeholder="Imagem"></image-slot>
+
+      <div style="padding:24px 20px 40px;">
+        <div style="font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:3px; font-size:11px; color:#C9A227; margin-bottom:8px;">{{ detail.kicker }}</div>
+        <h1 style="margin:0 0 14px; font-family:'Oswald',sans-serif; font-weight:700; font-size:32px; line-height:1.04; letter-spacing:0.5px;">{{ detail.title }}</h1>
+        <p style="margin:0 0 22px; font-size:14px; color:#BDB7AC; line-height:1.65;">{{ detail.desc }}</p>
+
+        <sc-if value="{{ detailHasPoints }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-bottom:24px;">
+            <div style="font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; color:#fff; margin-bottom:14px;">O QUE ESTÁ INCLUSO</div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <sc-for list="{{ detailPoints }}" as="point" hint-placeholder-count="4">
+                <div style="display:flex; align-items:flex-start; gap:12px; padding:14px; background:linear-gradient(135deg,#16130d,#0c0a07); border:1px solid rgba(201,162,39,0.22); border-radius:10px;">
+                  <i data-lucide="check" width="18" height="18" style="color:#C9A227; flex:none; margin-top:1px;"></i>
+                  <span style="font-size:13.5px; color:#D8D2C7; line-height:1.45;">{{ point }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="background:linear-gradient(160deg,#15120b,#0a0806); border:1px solid rgba(201,162,39,0.30); border-radius:14px; padding:20px; text-align:center;">
+          <div style="font-size:13px; color:#A9A399; margin-bottom:10px;">{{ detail.ctaNote }}</div>
+          <button data-id="contato" onClick="{{ onItemClick }}" style="width:100%; padding:16px; background:linear-gradient(135deg,#C9A227,#9A7B1B); border:none; border-radius:10px; color:#0A0908; font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:1px; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;">{{ detail.cta }} <i data-lucide="arrow-right" width="18" height="18"></i></button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { screen: 'home', menuOpen: false, servicosOpen: true, detail: null };
+
+  componentDidMount() { this._icons(); }
+  componentDidUpdate() { this._icons(); }
+  _icons() {
+    const run = () => { try { window.lucide && window.lucide.createIcons(); } catch (e) {} };
+    run();
+    requestAnimationFrame(run);
+    setTimeout(run, 120);
+  }
+
+  _details() {
+    return {
+      consultoria: {
+        kicker: 'SERVIÇO', title: 'CONSULTORIA ONLINE',
+        desc: 'Treine de qualquer lugar com um plano 100% individualizado. Montagem de treino, ajustes contínuos e acompanhamento direto pelo aplicativo.',
+        points: ['Treino personalizado no aplicativo', 'Ajustes e progressão contínuos', 'Suporte direto com o Lucas', 'Acesso a vídeos de execução'],
+        cta: 'QUERO COMEÇAR', ctaNote: 'Comece sua transformação hoje mesmo.' },
+      personalpresencial: {
+        kicker: 'ATENDIMENTO EXCLUSIVO', title: 'PERSONAL PRESENCIAL',
+        desc: 'Treino personalizado ao vivo com acompanhamento direto e foco total em resultados. Supervisão profissional em cada exercício.',
+        points: ['Acompanhamento ao vivo, presencial', 'Correção de execução em tempo real', 'Periodização personalizada', 'Foco total na sua evolução'],
+        cta: 'FALAR NO WHATSAPP', ctaNote: 'Atendimento exclusivo e limitado. Fale comigo para verificar disponibilidade.' },
+      avaliacao: {
+        kicker: 'SERVIÇO', title: 'AVALIAÇÃO FÍSICA',
+        desc: 'Análise completa da sua composição corporal e do seu condicionamento para construir um plano 100% personalizado.',
+        points: ['Anamnese', 'Avaliação física (dobras cutâneas)', 'Avaliação da força e resistência', 'Condicionamento aeróbico'],
+        cta: 'AGENDAR AVALIAÇÃO', ctaNote: 'Agende sua avaliação física completa.' },
+      nutricional: {
+        kicker: 'EM BREVE', title: 'ATENDIMENTO NUTRICIONAL ONLINE',
+        desc: 'Em breve: a nutrição certa para potencializar seus resultados, integrada ao seu treino.',
+        points: [], cta: 'QUERO SER AVISADO', ctaNote: 'Entre na lista de espera e seja avisado no lançamento.' },
+      oferta: {
+        kicker: 'OFERTA ESPECIAL', title: '6 MESES DE TREINO EXCLUSIVO',
+        desc: '6 meses de treino exclusivo para você por apenas R$97,00. Treino individualizado, progressão planejada e acompanhamento direto.',
+        points: ['6 meses de treino exclusivo', 'Progressão planejada', 'Acesso pelo aplicativo', 'Suporte direto com o Lucas'],
+        cta: 'QUERO MEU ACESSO — R$97', ctaNote: 'Vagas limitadas por esse valor.' },
+      fitslim: {
+        kicker: 'EMAGRECIMENTO', title: 'FIT SLIM',
+        desc: 'Protocolo completo para queimar gordura, acelerar o metabolismo e definir o corpo.',
+        points: ['Treino focado em emagrecimento', 'Estratégias para acelerar o metabolismo', 'Progressão planejada', 'Acompanhamento pelo app'],
+        cta: 'QUERO O FIT SLIM', ctaNote: 'Comece sua transformação agora.' },
+      gluteoprotocol: {
+        kicker: 'CRESCIMENTO E DEFINIÇÃO', title: 'GLÚTEO PROTOCOL',
+        desc: 'Treinos e estratégias específicas para desenvolver, levantar e definir seus glúteos.',
+        points: ['Treino específico para glúteos', 'Técnicas de ativação e crescimento', 'Progressão semanal', 'Acompanhamento pelo app'],
+        cta: 'QUERO O PROTOCOL', ctaNote: 'Construa o resultado que você procura.' },
+      gorilla: {
+        kicker: 'GANHO DE FORÇA', title: 'GORILLA STRENGTH',
+        desc: 'Programa focado em força máxima, performance e evolução constante.',
+        points: ['Periodização de força', 'Foco em performance', 'Progressão de cargas planejada', 'Acompanhamento pelo app'],
+        cta: 'QUERO O GORILLA', ctaNote: 'Evolua sua força de forma constante.' },
+      pump100: {
+        kicker: 'HIPERTROFIA', title: 'PUMP 100',
+        desc: 'Métodos avançados de treino para maximizar o ganho de massa muscular.',
+        points: ['Métodos avançados de hipertrofia', 'Volume e intensidade otimizados', 'Progressão planejada', 'Acompanhamento pelo app'],
+        cta: 'QUERO O PUMP 100', ctaNote: 'Maximize seu ganho de massa.' },
+      consultoriapremium: {
+        kicker: 'ONLINE', title: 'CONSULTORIA PREMIUM',
+        desc: 'Acompanhamento individualizado 100% online com suporte diário e ajustes estratégicos.',
+        points: ['Suporte diário com o Lucas', 'Ajustes estratégicos contínuos', 'Plano de treino e dieta', 'Acompanhamento premium pelo app'],
+        cta: 'FALAR NO WHATSAPP', ctaNote: 'Vagas limitadas. Fale comigo para verificar disponibilidade.' },
+      resultados: {
+        kicker: 'TRANSFORMAÇÕES', title: 'RESULTADOS REAIS',
+        desc: 'Resultados reais de alunos que confiaram no método e transformaram o corpo e a vida.',
+        points: [], cta: 'QUERO ESSES RESULTADOS', ctaNote: 'Seja o próximo resultado real.' },
+      sobre: {
+        kicker: 'SOBRE MIM', title: 'LUCAS GONÇALVES',
+        desc: 'Sou Lucas Gonçalves, personal trainer e especialista em hipertrofia, emagrecimento e performance. Meu objetivo é transformar vidas através de método, disciplina e acompanhamento individualizado.',
+        points: ['+500 alunos transformados', 'Experiência comprovada', 'Atendimento individualizado', 'Método que gera resultado'],
+        cta: 'FALAR COMIGO', ctaNote: 'Vamos construir o seu resultado juntos.' },
+      contato: {
+        kicker: 'CONTATO', title: 'FALE COMIGO',
+        desc: 'Tire suas dúvidas e dê o primeiro passo. Me chame no WhatsApp e vamos montar o melhor caminho para você.',
+        points: [], cta: 'CHAMAR NO WHATSAPP', ctaNote: 'Resposta rápida no horário comercial.' }
+    };
+  }
+
+  renderVals() {
+    const map = this._details();
+    const d = this.state.detail ? map[this.state.detail] : null;
+    return {
+      screen: this.state.screen,
+      showProgramas: this.state.screen === 'programas',
+      showDetail: this.state.screen === 'detail',
+      menuOpen: this.state.menuOpen,
+      servicosOpen: this.state.servicosOpen,
+      detail: d || {},
+      detailPoints: d ? d.points : [],
+      detailHasPoints: !!(d && d.points && d.points.length),
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      toggleServicos: () => this.setState(s => ({ servicosOpen: !s.servicosOpen })),
+      goHome: () => this.setState({ screen: 'home', menuOpen: false, detail: null }),
+      back: () => this.setState({ screen: 'home', detail: null }),
+      onItemClick: (e) => {
+        const id = e.currentTarget.getAttribute('data-id');
+        if (id === 'home') { this.setState({ screen: 'home', menuOpen: false, detail: null }); window.scrollTo(0, 0); return; }
+        if (id === 'programas') { this.setState({ screen: 'programas', menuOpen: false, detail: null }); window.scrollTo(0, 0); return; }
+        this.setState({ screen: 'detail', detail: id, menuOpen: false });
+        window.scrollTo(0, 0);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
