@@ -46,10 +46,20 @@ function authed(req) {
 }
 
 // Conteúdo padrão usado enquanto nada foi salvo (e como fallback do site).
+// appearance/texts/images/details são aditivos: chave ausente = site usa o
+// valor embutido no próprio index.html.
 const DEFAULT_CONTENT = {
   settings: {
     whatsapp: '5573981132052',
-    instagram: 'lucasgoncalves.personal'
+    instagram: 'lucasgoncalves.personal',
+    appearance: {
+      primary: '#C9A227',    // dourado da marca
+      secondary: '#F3DD8E',  // tom claro dos gradientes
+      background: '#0A0908'  // fundo do site
+    },
+    texts: {},   // overrides de texto por chave data-text
+    images: {},  // overrides de imagem por chave data-slot
+    details: {}  // overrides dos modais de detalhe (DETAILS do index.html)
   },
   posts: []
 };
