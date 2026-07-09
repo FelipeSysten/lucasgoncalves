@@ -1,0 +1,87 @@
+[
+ {
+  "key": "g-mark",
+  "label": "Marca — símbolo G",
+  "default": "assets/g-mark.png"
+ },
+ {
+  "key": "logo",
+  "label": "Rodapé — logotipo",
+  "default": "assets/logo.png"
+ },
+ {
+  "key": "lucas-hero",
+  "label": "Hero — foto principal",
+  "default": "assets/lucas-hero.png"
+ },
+ {
+  "key": "oferta-texto",
+  "label": "Oferta — arte do card",
+  "default": "assets/oferta-texto.png"
+ },
+ {
+  "key": "prog-fitslim",
+  "label": "Programa — Fit Slim",
+  "default": "assets/prog-fitslim.png"
+ },
+ {
+  "key": "prog-gluteo",
+  "label": "Programa — Glúteo Protocol",
+  "default": "assets/prog-gluteo.png"
+ },
+ {
+  "key": "prog-gorilla",
+  "label": "Programa — Gorilla Strength",
+  "default": "assets/prog-gorilla.png"
+ },
+ {
+  "key": "prog-premium",
+  "label": "Programa — Consultoria Premium",
+  "default": "assets/prog-premium.png"
+ },
+ {
+  "key": "prog-presencial",
+  "label": "Programa — Personal Presencial",
+  "default": "assets/prog-presencial.png"
+ },
+ {
+  "key": "prog-pump100",
+  "label": "Programa — Pump 100",
+  "default": "assets/prog-pump100.png"
+ },
+ {
+  "key": "resultado-1",
+  "label": "Resultados — foto 1",
+  "default": "assets/resultado-1.png"
+ },
+ {
+  "key": "resultado-2",
+  "label": "Resultados — foto 2",
+  "default": "assets/resultado-2.png"
+ },
+ {
+  "key": "sobre",
+  "label": "Sobre — foto",
+  "default": "assets/sobre.png"
+ },
+ {
+  "key": "svc-avaliacao",
+  "label": "Serviço — Avaliação Física",
+  "default": "assets/svc-avaliacao.png"
+ },
+ {
+  "key": "svc-consultoria",
+  "label": "Serviço — Consultoria Online",
+  "default": "assets/svc-consultoria.png"
+ },
+ {
+  "key": "svc-nutricional",
+  "label": "Serviço — Nutricional",
+  "default": "assets/svc-nutricional.png"
+ },
+ {
+  "key": "svc-personal",
+  "label": "Serviço — Personal Presencial",
+  "default": "assets/svc-personal.png"
+ }
+]

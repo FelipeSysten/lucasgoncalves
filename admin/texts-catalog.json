@@ -1,0 +1,746 @@
+[
+ {
+  "key": "brand-sub",
+  "label": "Subtítulo da marca (Personal Trainer)",
+  "group": "Marca",
+  "default": "PERSONAL TRAINER"
+ },
+ {
+  "key": "cta-servicos",
+  "label": "Botão “Conhecer serviços”",
+  "group": "Hero (topo)",
+  "default": "CONHECER SERVIÇOS"
+ },
+ {
+  "key": "d-hero-desc",
+  "label": "Hero — parágrafo (computador)",
+  "group": "Hero (topo)",
+  "default": "Transforme seu corpo e sua vida com método, disciplina e acompanhamento individualizado. Resultados de verdade, do seu jeito."
+ },
+ {
+  "key": "d-stat1-label",
+  "label": "Hero — estatística 1 (rótulo)",
+  "group": "Hero (topo)",
+  "default": "ALUNOS TRANSFORMADOS"
+ },
+ {
+  "key": "d-stat1-num",
+  "label": "Hero — estatística 1 (número)",
+  "group": "Hero (topo)",
+  "default": "+500"
+ },
+ {
+  "key": "d-stat2-label",
+  "label": "Hero — estatística 2 (rótulo)",
+  "group": "Hero (topo)",
+  "default": "PROGRAMAS EXCLUSIVOS"
+ },
+ {
+  "key": "d-stat2-num",
+  "label": "Hero — estatística 2 (número)",
+  "group": "Hero (topo)",
+  "default": "6"
+ },
+ {
+  "key": "d-stat3-label",
+  "label": "Hero — estatística 3 (rótulo)",
+  "group": "Hero (topo)",
+  "default": "INDIVIDUALIZADO"
+ },
+ {
+  "key": "d-stat3-num",
+  "label": "Hero — estatística 3 (número)",
+  "group": "Hero (topo)",
+  "default": "100%"
+ },
+ {
+  "key": "hero-nome-1",
+  "label": "Hero — nome (linha dourada)",
+  "group": "Hero (topo)",
+  "default": "LUCAS"
+ },
+ {
+  "key": "hero-nome-2",
+  "label": "Hero — nome (linha branca)",
+  "group": "Hero (topo)",
+  "default": "GONÇALVES"
+ },
+ {
+  "key": "hero-tagline",
+  "label": "Hero — slogan",
+  "group": "Hero (topo)",
+  "default": "PERFORMANCE  •  HIPERTROFIA  •  RESULTADOS"
+ },
+ {
+  "key": "d-nutricional-badge",
+  "label": "Card Nutricional — selo “Em breve”",
+  "group": "Serviços",
+  "default": "EM BREVE"
+ },
+ {
+  "key": "d-servicos-kicker",
+  "label": "Serviços — selo (computador)",
+  "group": "Serviços",
+  "default": "— NOSSOS SERVIÇOS —"
+ },
+ {
+  "key": "d-servicos-sub",
+  "label": "Serviços — subtítulo (computador)",
+  "group": "Serviços",
+  "default": "Para quem busca resultados de verdade. Escolha o tipo de acompanhamento ideal para o seu momento."
+ },
+ {
+  "key": "d-servicos-t1",
+  "label": "Serviços — título parte 1 (computador)",
+  "group": "Serviços",
+  "default": "ACOMPANHAMENTO"
+ },
+ {
+  "key": "d-servicos-t2",
+  "label": "Serviços — título parte 2 (computador)",
+  "group": "Serviços",
+  "default": "PROFISSIONAL"
+ },
+ {
+  "key": "d-svc-nutricional-t2",
+  "label": "Card Nutricional — título parte 2 (computador)",
+  "group": "Serviços",
+  "default": "NUTRICIONAL"
+ },
+ {
+  "key": "m-servicos-sub-1",
+  "label": "Serviços — subtítulo linha 1 (celular)",
+  "group": "Serviços",
+  "default": "ACOMPANHAMENTO PROFISSIONAL"
+ },
+ {
+  "key": "m-servicos-sub-2",
+  "label": "Serviços — subtítulo linha 2 (celular)",
+  "group": "Serviços",
+  "default": "PARA QUEM BUSCA"
+ },
+ {
+  "key": "m-servicos-sub-3",
+  "label": "Serviços — subtítulo destaque (celular)",
+  "group": "Serviços",
+  "default": "RESULTADOS DE VERDADE."
+ },
+ {
+  "key": "m-servicos-t1",
+  "label": "Serviços — título parte 1 (celular)",
+  "group": "Serviços",
+  "default": "NOSSOS"
+ },
+ {
+  "key": "m-servicos-t2",
+  "label": "Serviços — título parte 2 (celular)",
+  "group": "Serviços",
+  "default": "SERVIÇOS"
+ },
+ {
+  "key": "m-svc-nutricional-t2",
+  "label": "Card Nutricional — título parte 2 (celular)",
+  "group": "Serviços",
+  "default": "NUTRICIONAL ONLINE"
+ },
+ {
+  "key": "svc-avaliacao-desc",
+  "label": "Card Avaliação — descrição",
+  "group": "Serviços",
+  "default": "Análise completa da sua composição corporal para um plano 100% personalizado."
+ },
+ {
+  "key": "svc-avaliacao-t1",
+  "label": "Card Avaliação — título parte 1",
+  "group": "Serviços",
+  "default": "AVALIAÇÃO"
+ },
+ {
+  "key": "svc-avaliacao-t2",
+  "label": "Card Avaliação — título parte 2",
+  "group": "Serviços",
+  "default": "FÍSICA"
+ },
+ {
+  "key": "svc-consultoria-desc",
+  "label": "Card Consultoria — descrição",
+  "group": "Serviços",
+  "default": "Treino de qualquer lugar com acompanhamento individualizado."
+ },
+ {
+  "key": "svc-consultoria-t1",
+  "label": "Card Consultoria — título parte 1",
+  "group": "Serviços",
+  "default": "CONSULTORIA"
+ },
+ {
+  "key": "svc-consultoria-t2",
+  "label": "Card Consultoria — título parte 2",
+  "group": "Serviços",
+  "default": "ONLINE"
+ },
+ {
+  "key": "svc-nutricional-desc",
+  "label": "Card Nutricional — descrição",
+  "group": "Serviços",
+  "default": "Em breve: a nutrição certa para potencializar seus resultados."
+ },
+ {
+  "key": "svc-nutricional-t1",
+  "label": "Card Nutricional — título parte 1 (celular)",
+  "group": "Serviços",
+  "default": "ATENDIMENTO"
+ },
+ {
+  "key": "svc-personal-desc",
+  "label": "Card Personal — descrição",
+  "group": "Serviços",
+  "default": "Treine com supervisão profissional e tenha segurança em cada exercício."
+ },
+ {
+  "key": "svc-personal-t1",
+  "label": "Card Personal — título parte 1",
+  "group": "Serviços",
+  "default": "PERSONAL"
+ },
+ {
+  "key": "svc-personal-t2",
+  "label": "Card Personal — título parte 2",
+  "group": "Serviços",
+  "default": "PRESENCIAL"
+ },
+ {
+  "key": "d-hero-oferta-btn",
+  "label": "Hero — botão da oferta (computador)",
+  "group": "Oferta R$97",
+  "default": "OFERTA R$97"
+ },
+ {
+  "key": "d-oferta-desc",
+  "label": "Oferta — descrição (computador)",
+  "group": "Oferta R$97",
+  "default": "Para você. Treino individualizado, progressão planejada e acompanhamento direto por 6 meses — tudo pelo aplicativo."
+ },
+ {
+  "key": "d-oferta-kicker",
+  "label": "Oferta — selo (computador)",
+  "group": "Oferta R$97",
+  "default": "OFERTA ESPECIAL"
+ },
+ {
+  "key": "m-oferta-desc",
+  "label": "Oferta — descrição (celular)",
+  "group": "Oferta R$97",
+  "default": "Para você. Treino individualizado, progressão planejada e acompanhamento direto por 6 meses."
+ },
+ {
+  "key": "oferta-apenas",
+  "label": "Oferta — rótulo do preço (“APENAS”)",
+  "group": "Oferta R$97",
+  "default": "APENAS"
+ },
+ {
+  "key": "oferta-cta",
+  "label": "Oferta — botão principal",
+  "group": "Oferta R$97",
+  "default": "QUERO MEU ACESSO"
+ },
+ {
+  "key": "oferta-cta-d",
+  "label": "(idem, computador)",
+  "group": "Oferta R$97",
+  "default": "QUERO MEU ACESSO"
+ },
+ {
+  "key": "oferta-preco",
+  "label": "Oferta — preço",
+  "group": "Oferta R$97",
+  "default": "R$97"
+ },
+ {
+  "key": "oferta-titulo",
+  "label": "Oferta — título",
+  "group": "Oferta R$97",
+  "default": "6 MESES DE TREINO EXCLUSIVO"
+ },
+ {
+  "key": "d-prog-consultoriapremium-desc",
+  "label": "Programa — descrição do card (computador)",
+  "group": "Programas",
+  "default": "Acompanhamento individualizado 100% online com suporte diário e ajustes estratégicos."
+ },
+ {
+  "key": "d-prog-fitslim-desc",
+  "label": "Programa — descrição do card (computador)",
+  "group": "Programas",
+  "default": "Protocolo completo para queimar gordura, acelerar o metabolismo e definir o corpo."
+ },
+ {
+  "key": "d-prog-gluteoprotocol-desc",
+  "label": "Programa — descrição do card (computador)",
+  "group": "Programas",
+  "default": "Treinos e estratégias específicas para desenvolver, levantar e definir seus glúteos."
+ },
+ {
+  "key": "d-prog-gorilla-desc",
+  "label": "Programa — descrição do card (computador)",
+  "group": "Programas",
+  "default": "Programa focado em força máxima, performance e evolução constante."
+ },
+ {
+  "key": "d-prog-personalpresencial-desc",
+  "label": "Programa — descrição do card (computador)",
+  "group": "Programas",
+  "default": "Treino personalizado ao vivo com acompanhamento direto e foco total em resultados."
+ },
+ {
+  "key": "d-prog-pump100-desc",
+  "label": "Programa — descrição do card (computador)",
+  "group": "Programas",
+  "default": "Métodos avançados de treino para maximizar o ganho de massa muscular."
+ },
+ {
+  "key": "prog-consultoriapremium-cat",
+  "label": "Programa CONSULTORIA PREMIUM — categoria",
+  "group": "Programas",
+  "default": "ONLINE"
+ },
+ {
+  "key": "prog-consultoriapremium-nome",
+  "label": "Programa CONSULTORIA PREMIUM — nome",
+  "group": "Programas",
+  "default": "CONSULTORIA PREMIUM"
+ },
+ {
+  "key": "prog-fitslim-cat",
+  "label": "Programa FIT SLIM — categoria",
+  "group": "Programas",
+  "default": "EMAGRECIMENTO"
+ },
+ {
+  "key": "prog-fitslim-nome",
+  "label": "Programa FIT SLIM — nome",
+  "group": "Programas",
+  "default": "FIT SLIM"
+ },
+ {
+  "key": "prog-gluteoprotocol-cat",
+  "label": "Programa GLÚTEO PROTOCOL — categoria",
+  "group": "Programas",
+  "default": "CRESCIMENTO E DEFINIÇÃO"
+ },
+ {
+  "key": "prog-gluteoprotocol-nome",
+  "label": "Programa GLÚTEO PROTOCOL — nome",
+  "group": "Programas",
+  "default": "GLÚTEO PROTOCOL"
+ },
+ {
+  "key": "prog-gorilla-cat",
+  "label": "Programa GORILLA STRENGTH — categoria",
+  "group": "Programas",
+  "default": "GANHO DE FORÇA"
+ },
+ {
+  "key": "prog-gorilla-nome",
+  "label": "Programa GORILLA STRENGTH — nome",
+  "group": "Programas",
+  "default": "GORILLA STRENGTH"
+ },
+ {
+  "key": "prog-kicker",
+  "label": "Programas — selo",
+  "group": "Programas",
+  "default": "— PROGRAMAS —"
+ },
+ {
+  "key": "prog-personalpresencial-cat",
+  "label": "Programa PERSONAL PRESENCIAL — categoria",
+  "group": "Programas",
+  "default": "ATENDIMENTO EXCLUSIVO"
+ },
+ {
+  "key": "prog-personalpresencial-nome",
+  "label": "Programa PERSONAL PRESENCIAL — nome",
+  "group": "Programas",
+  "default": "PERSONAL PRESENCIAL"
+ },
+ {
+  "key": "prog-pump100-cat",
+  "label": "Programa PUMP 100 — categoria",
+  "group": "Programas",
+  "default": "HIPERTROFIA"
+ },
+ {
+  "key": "prog-pump100-nome",
+  "label": "Programa PUMP 100 — nome",
+  "group": "Programas",
+  "default": "PUMP 100"
+ },
+ {
+  "key": "prog-sub",
+  "label": "Programas — subtítulo",
+  "group": "Programas",
+  "default": "Programas completos e personalizados para te levar do ponto onde você está até o corpo e a vida que você merece."
+ },
+ {
+  "key": "prog-t1-d",
+  "label": "(idem, computador)",
+  "group": "Programas",
+  "default": "ESCOLHA O"
+ },
+ {
+  "key": "prog-t1-m",
+  "label": "Programas — título parte 1",
+  "group": "Programas",
+  "default": "ESCOLHA O"
+ },
+ {
+  "key": "prog-t2",
+  "label": "Programas — título parte 2",
+  "group": "Programas",
+  "default": "SEU CAMINHO."
+ },
+ {
+  "key": "feat-1",
+  "label": "Recurso 1 — título",
+  "group": "Vitrine de recursos",
+  "default": "TREINOS PERSONALIZADOS"
+ },
+ {
+  "key": "feat-1-desc",
+  "label": "Recurso 1 — descrição (computador)",
+  "group": "Vitrine de recursos",
+  "default": "Planejamento 100% focado nos seus objetivos."
+ },
+ {
+  "key": "feat-2",
+  "label": "Recurso 2 — título",
+  "group": "Vitrine de recursos",
+  "default": "ACOMPANHAMENTO NUTRICIONAL"
+ },
+ {
+  "key": "feat-2-desc",
+  "label": "Recurso 2 — descrição (computador)",
+  "group": "Vitrine de recursos",
+  "default": "Estratégias alimentares personalizadas."
+ },
+ {
+  "key": "feat-3",
+  "label": "Recurso 3 — título",
+  "group": "Vitrine de recursos",
+  "default": "AJUSTES SEMANAIS"
+ },
+ {
+  "key": "feat-3-desc",
+  "label": "Recurso 3 — descrição (computador)",
+  "group": "Vitrine de recursos",
+  "default": "Evolução constante com análises e ajustes."
+ },
+ {
+  "key": "feat-4",
+  "label": "Recurso 4 — título",
+  "group": "Vitrine de recursos",
+  "default": "SUPORTE DIRETO"
+ },
+ {
+  "key": "feat-4-desc",
+  "label": "Recurso 4 — descrição (computador)",
+  "group": "Vitrine de recursos",
+  "default": "Fale diretamente comigo sempre que precisar."
+ },
+ {
+  "key": "feat-5",
+  "label": "Recurso 5 — título",
+  "group": "Vitrine de recursos",
+  "default": "APLICATIVO EXCLUSIVO"
+ },
+ {
+  "key": "feat-5-desc",
+  "label": "Recurso 5 — descrição (computador)",
+  "group": "Vitrine de recursos",
+  "default": "Acompanhe treinos, dieta e evolução no app."
+ },
+ {
+  "key": "feat-6",
+  "label": "Recurso 6 — título",
+  "group": "Vitrine de recursos",
+  "default": "RESULTADOS REAIS"
+ },
+ {
+  "key": "feat-6-desc",
+  "label": "Recurso 6 — descrição (computador)",
+  "group": "Vitrine de recursos",
+  "default": "Método comprovado que gera transformação."
+ },
+ {
+  "key": "d-resultados-kicker",
+  "label": "Resultados — selo (computador)",
+  "group": "Resultados",
+  "default": "— TRANSFORMAÇÕES —"
+ },
+ {
+  "key": "resultados-cta",
+  "label": "Resultados — botão",
+  "group": "Resultados",
+  "default": "VER MAIS RESULTADOS"
+ },
+ {
+  "key": "resultados-cta-d",
+  "label": "(idem, computador)",
+  "group": "Resultados",
+  "default": "VER MAIS RESULTADOS"
+ },
+ {
+  "key": "resultados-t1",
+  "label": "Resultados — título parte 1",
+  "group": "Resultados",
+  "default": "RESULTADOS"
+ },
+ {
+  "key": "resultados-t2",
+  "label": "Resultados — título parte 2",
+  "group": "Resultados",
+  "default": "REAIS"
+ },
+ {
+  "key": "d-sobre-kicker",
+  "label": "Sobre — selo (computador)",
+  "group": "Sobre",
+  "default": "— SOBRE MIM —"
+ },
+ {
+  "key": "d-sobre-t1",
+  "label": "Sobre — título parte 1 (computador)",
+  "group": "Sobre",
+  "default": "MAIS QUE TREINOS,"
+ },
+ {
+  "key": "d-sobre-t2",
+  "label": "Sobre — título parte 2 (computador)",
+  "group": "Sobre",
+  "default": "TRANSFORMAÇÃO."
+ },
+ {
+  "key": "m-sobre-t1",
+  "label": "Sobre — título parte 1 (celular)",
+  "group": "Sobre",
+  "default": "SOBRE"
+ },
+ {
+  "key": "m-sobre-t2",
+  "label": "Sobre — título parte 2 (celular)",
+  "group": "Sobre",
+  "default": "MIM"
+ },
+ {
+  "key": "sobre-p1",
+  "label": "Sobre — parágrafo 1 (após o nome)",
+  "group": "Sobre",
+  "default": ", personal trainer e especialista em hipertrofia, emagrecimento e performance."
+ },
+ {
+  "key": "sobre-p2",
+  "label": "Sobre — parágrafo 2",
+  "group": "Sobre",
+  "default": "Meu objetivo é entregar mais do que treinos: é transformar vidas através de método, disciplina e acompanhamento individualizado."
+ },
+ {
+  "key": "sobre-stat1-label",
+  "label": "Sobre — estatística 1 (rótulo)",
+  "group": "Sobre",
+  "default": "ALUNOS"
+ },
+ {
+  "key": "sobre-stat1-num",
+  "label": "Sobre — estatística 1 (número)",
+  "group": "Sobre",
+  "default": "+500"
+ },
+ {
+  "key": "sobre-stat1-sub",
+  "label": "Sobre — estatística 1 (linha 2)",
+  "group": "Sobre",
+  "default": "TRANSFORMADOS"
+ },
+ {
+  "key": "sobre-stat2",
+  "label": "Sobre — estatística 2",
+  "group": "Sobre",
+  "default": "EXPERIÊNCIA"
+ },
+ {
+  "key": "sobre-stat2-sub",
+  "label": "Sobre — estatística 2 (linha 2)",
+  "group": "Sobre",
+  "default": "COMPROVADA"
+ },
+ {
+  "key": "sobre-stat3",
+  "label": "Sobre — estatística 3",
+  "group": "Sobre",
+  "default": "ATENDIMENTO"
+ },
+ {
+  "key": "sobre-stat3-sub",
+  "label": "Sobre — estatística 3 (linha 2)",
+  "group": "Sobre",
+  "default": "INDIVIDUALIZADO"
+ },
+ {
+  "key": "d-dep-kicker",
+  "label": "Depoimentos — selo (computador)",
+  "group": "Depoimentos",
+  "default": "— DEPOIMENTOS —"
+ },
+ {
+  "key": "d-dep-t1",
+  "label": "Depoimentos — título parte 1 (computador)",
+  "group": "Depoimentos",
+  "default": "QUEM TREINA,"
+ },
+ {
+  "key": "d-dep-t2",
+  "label": "Depoimentos — título parte 2 (computador)",
+  "group": "Depoimentos",
+  "default": "RECOMENDA."
+ },
+ {
+  "key": "dep1-cargo",
+  "label": "Depoimento 1 — descrição",
+  "group": "Depoimentos",
+  "default": "Aluna da Consultoria Online"
+ },
+ {
+  "key": "dep1-nome",
+  "label": "Depoimento 1 — nome",
+  "group": "Depoimentos",
+  "default": "Juliana M."
+ },
+ {
+  "key": "dep1-texto",
+  "label": "Depoimento 1 — texto",
+  "group": "Depoimentos",
+  "default": "\"O acompanhamento do Lucas fez toda a diferença. Consegui resultados que nunca imaginei em tão pouco tempo!\""
+ },
+ {
+  "key": "dep2-cargo",
+  "label": "Depoimento 2 — descrição",
+  "group": "Depoimentos",
+  "default": "Aluno do Gorilla Strength"
+ },
+ {
+  "key": "dep2-nome",
+  "label": "Depoimento 2 — nome",
+  "group": "Depoimentos",
+  "default": "Rafael S."
+ },
+ {
+  "key": "dep2-texto",
+  "label": "Depoimento 2 — texto",
+  "group": "Depoimentos",
+  "default": "\"Método sério e direto. Ganhei massa, força e disciplina. Hoje treino com propósito e vejo evolução toda semana.\""
+ },
+ {
+  "key": "dep3-cargo",
+  "label": "Depoimento 3 — descrição",
+  "group": "Depoimentos",
+  "default": "Aluna do Fit Slim"
+ },
+ {
+  "key": "dep3-nome",
+  "label": "Depoimento 3 — nome",
+  "group": "Depoimentos",
+  "default": "Camila R."
+ },
+ {
+  "key": "dep3-texto",
+  "label": "Depoimento 3 — texto",
+  "group": "Depoimentos",
+  "default": "\"Suporte direto, ajustes constantes e treino que cabe na minha rotina. Recomendo de olhos fechados!\""
+ },
+ {
+  "key": "m-dep-titulo",
+  "label": "Depoimentos — título (celular)",
+  "group": "Depoimentos",
+  "default": "DEPOIMENTOS"
+ },
+ {
+  "key": "d-novidades-kicker",
+  "label": "Novidades — selo (computador)",
+  "group": "Novidades",
+  "default": "— NOVIDADES —"
+ },
+ {
+  "key": "d-novidades-t1",
+  "label": "Novidades — título parte 1 (computador)",
+  "group": "Novidades",
+  "default": "FIQUE POR"
+ },
+ {
+  "key": "d-novidades-t2",
+  "label": "Novidades — título parte 2 (computador)",
+  "group": "Novidades",
+  "default": "DENTRO."
+ },
+ {
+  "key": "m-novidades-titulo",
+  "label": "Novidades — título (celular)",
+  "group": "Novidades",
+  "default": "NOVIDADES"
+ },
+ {
+  "key": "ig-cta",
+  "label": "Instagram — botão",
+  "group": "Instagram",
+  "default": "IR PARA O INSTAGRAM"
+ },
+ {
+  "key": "ig-desc",
+  "label": "Instagram — descrição",
+  "group": "Instagram",
+  "default": "Conteúdos diários sobre treino, dieta e performance."
+ },
+ {
+  "key": "ig-titulo",
+  "label": "Instagram — título",
+  "group": "Instagram",
+  "default": "ME SIGA NO INSTAGRAM"
+ },
+ {
+  "key": "d-copyright",
+  "label": "Rodapé — copyright (computador)",
+  "group": "Rodapé",
+  "default": "© 2024 Lucas Gonçalves — Todos os direitos reservados."
+ },
+ {
+  "key": "d-footer-desc",
+  "label": "Rodapé — descrição (computador)",
+  "group": "Rodapé",
+  "default": "Performance • Hipertrofia • Resultados. Transforme seu corpo e sua vida com método e acompanhamento individualizado."
+ },
+ {
+  "key": "m-copyright-1",
+  "label": "Rodapé — copyright linha 1 (celular)",
+  "group": "Rodapé",
+  "default": "© 2024 Lucas Gonçalves"
+ },
+ {
+  "key": "m-copyright-2",
+  "label": "Rodapé — copyright linha 2 (celular)",
+  "group": "Rodapé",
+  "default": "Todos os direitos reservados."
+ },
+ {
+  "key": "m-footer-tagline",
+  "label": "Rodapé — slogan (celular)",
+  "group": "Rodapé",
+  "default": "Performance  •  Hipertrofia  •  Resultados"
+ },
+ {
+  "key": "detail-incluso",
+  "label": "Modal de detalhe — título da lista",
+  "group": "Modais",
+  "default": "O QUE ESTÁ INCLUSO"
+ }
+]
