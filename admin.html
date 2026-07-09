@@ -9,37 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *{ box-sizing:border-box; }
-  html,body{ margin:0; padding:0; background:#0A0908; }
-  body{ color:#fff; font-family:'Outfit',sans-serif; min-height:100vh; }
-  [hidden]{ display:none !important; }
-  h1,h2,h3{ font-family:'Oswald',sans-serif; letter-spacing:0.5px; }
-  .gold{ color:#C9A227; }
-  .card{ background:linear-gradient(135deg,#16130d,#0c0a07); border:1px solid rgba(201,162,39,0.28); border-radius:14px; }
-  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 22px; border:none; border-radius:8px; background:linear-gradient(135deg,#C9A227,#9A7B1B); color:#0A0908; font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:1px; font-size:13px; cursor:pointer; }
-  .btn:disabled{ opacity:0.5; cursor:default; }
-  .btn-ghost{ background:transparent; border:1.5px solid rgba(201,162,39,0.55); color:#fff; }
-  .btn-danger{ background:transparent; border:1.5px solid rgba(200,60,60,0.6); color:#e08a8a; }
-  label{ display:block; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:11px; color:#9A958B; margin:16px 0 6px; }
-  input[type=text], input[type=password], textarea{ width:100%; padding:12px 14px; background:#0A0908; border:1px solid rgba(201,162,39,0.3); border-radius:8px; color:#fff; font-family:'Outfit',sans-serif; font-size:14px; outline:none; }
-  input:focus, textarea:focus{ border-color:#C9A227; }
-  textarea{ min-height:110px; resize:vertical; }
-  .hint{ font-size:12px; color:#8A857B; margin-top:6px; line-height:1.5; }
-  .status{ font-size:13px; margin-top:12px; min-height:18px; }
-  .status.ok{ color:#8fce8f; }
-  .status.err{ color:#e08a8a; }
-  .tabs{ display:flex; gap:8px; }
-  .tab{ padding:10px 18px; border-radius:8px 8px 0 0; border:1px solid rgba(201,162,39,0.25); border-bottom:none; background:#0c0a07; color:#9A958B; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:12px; cursor:pointer; }
-  .tab.active{ background:linear-gradient(135deg,#16130d,#0c0a07); color:#C9A227; }
-  .banner{ border:1px solid rgba(200,150,60,0.5); background:rgba(200,150,60,0.08); color:#e0c08a; border-radius:10px; padding:12px 16px; font-size:13px; line-height:1.55; margin-bottom:18px; }
-</style>
+<link rel="stylesheet" href="admin/admin.css">
 </head>
 <body>
 
 <!-- ============================== LOGIN ============================== -->
-<div id="login-view" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px;">
-  <form id="login-form" class="card" style="width:100%; max-width:380px; padding:34px 30px;">
+<div id="login-view">
+  <form id="login-form" class="card">
     <img src="assets/g-mark.png" alt="G" style="height:44px; display:block; margin:0 auto 12px;">
     <h1 style="margin:0 0 4px; text-align:center; font-size:22px;">PAINEL <span class="gold">ADMIN</span></h1>
     <div style="text-align:center; font-family:'Oswald',sans-serif; font-weight:300; letter-spacing:3px; font-size:10px; color:#8A8A8A;">LUCAS GONÇALVES — PERSONAL TRAINER</div>
@@ -54,330 +30,60 @@
 
 <!-- =============================== APP =============================== -->
 <div id="app-view" hidden>
-  <header style="border-bottom:1px solid rgba(201,162,39,0.2); background:#0c0a07;">
-    <div style="max-width:980px; margin:0 auto; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
-      <div style="display:flex; align-items:center; gap:12px;">
-        <img src="assets/g-mark.png" alt="G" style="height:34px;">
-        <div>
-          <div style="font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:15px;">PAINEL <span class="gold">ADMIN</span></div>
-          <div style="font-size:11px; color:#8A857B;">Gerencie o conteúdo do site</div>
-        </div>
-      </div>
-      <div style="display:flex; gap:10px;">
-        <a class="btn btn-ghost" href="/" target="_blank" rel="noopener" style="text-decoration:none;">VER SITE</a>
-        <button class="btn btn-ghost" id="btn-logout" type="button">SAIR</button>
-      </div>
+  <aside id="sidebar">
+    <div class="brand">
+      <img src="assets/g-mark.png" alt="G">
+      <div>PAINEL <span class="gold">ADMIN</span></div>
     </div>
-  </header>
-
-  <main style="max-width:980px; margin:0 auto; padding:26px 20px 60px;">
-    <div id="storage-banner" class="banner" hidden>
-      ⚠️ <strong>Armazenamento não configurado.</strong> No painel da Vercel: abra o projeto →
-      <strong>Storage → Create Database → Blob</strong> → conecte ao projeto e faça um redeploy.
-      Até lá, o site usa o conteúdo padrão e o botão salvar não funciona.
+    <nav>
+      <a data-route="" href="#/">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        DASHBOARD
+      </a>
+      <a data-route="postagens" href="#/postagens">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        POSTAGENS
+      </a>
+      <a data-route="midia" href="#/midia">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        MÍDIA
+      </a>
+      <a data-route="textos" href="#/textos">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg>
+        TEXTOS
+      </a>
+      <a data-route="aparencia" href="#/aparencia">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        APARÊNCIA
+      </a>
+      <a data-route="config" href="#/config">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        CONFIGURAÇÕES
+      </a>
+    </nav>
+    <div class="foot">
+      <a href="/" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        VER SITE
+      </a>
+      <button id="btn-logout" type="button">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+        SAIR
+      </button>
     </div>
-    <div id="default-pass-banner" class="banner" hidden>
-      🔒 Você está usando o login padrão <strong>admin / admin</strong>. Troque assim que possível:
-      na Vercel, em <strong>Settings → Environment Variables</strong>, crie <strong>ADMIN_USER</strong> e
-      <strong>ADMIN_PASS</strong> e faça um redeploy.
-    </div>
+  </aside>
 
-    <div class="tabs">
-      <button class="tab active" data-tab="posts" type="button">POSTAGENS</button>
-      <button class="tab" data-tab="settings" type="button">CONFIGURAÇÕES</button>
-    </div>
-
-    <!-- ------------------------- POSTAGENS ------------------------- -->
-    <section id="tab-posts" class="card" style="border-radius:0 14px 14px 14px; padding:26px;">
-      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
-        <div>
-          <h2 style="margin:0; font-size:20px;">POSTAGENS <span class="gold" id="posts-count"></span></h2>
-          <div class="hint">Aparecem na seção “Novidades” do site, da mais recente para a mais antiga.</div>
-        </div>
-        <button class="btn" id="btn-new-post" type="button">+ NOVA POSTAGEM</button>
-      </div>
-
-      <div id="post-list" style="margin-top:22px; display:flex; flex-direction:column; gap:12px;"></div>
-
-      <!-- editor -->
-      <div id="post-editor" hidden style="margin-top:22px; border-top:1px solid rgba(201,162,39,0.2); padding-top:22px;">
-        <h3 style="margin:0; font-size:16px;" id="editor-title">NOVA POSTAGEM</h3>
-        <label for="p-title">TÍTULO *</label>
-        <input id="p-title" type="text" maxlength="140" placeholder="Ex.: Turma nova de agosto aberta!">
-        <label for="p-kicker">CATEGORIA (opcional)</label>
-        <input id="p-kicker" type="text" maxlength="60" placeholder="Ex.: NOVIDADE, RESULTADO, AVISO…">
-        <label for="p-text">TEXTO *</label>
-        <textarea id="p-text" maxlength="2000" placeholder="Escreva a postagem…"></textarea>
-        <label>IMAGEM (opcional)</label>
-        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
-          <input id="p-img-file" type="file" accept="image/png,image/jpeg,image/webp" style="color:#9A958B; font-size:13px;">
-          <img id="p-img-preview" alt="" hidden style="height:64px; border-radius:8px; border:1px solid rgba(201,162,39,0.3);">
-          <button class="btn btn-ghost" id="p-img-clear" type="button" hidden>REMOVER IMAGEM</button>
-        </div>
-        <div class="hint">A imagem é comprimida automaticamente antes do envio.</div>
-        <label for="p-cta">TEXTO DO BOTÃO (opcional)</label>
-        <input id="p-cta" type="text" maxlength="60" placeholder="Ex.: QUERO PARTICIPAR">
-        <label for="p-msg">MENSAGEM DO WHATSAPP AO CLICAR NO BOTÃO (opcional)</label>
-        <input id="p-msg" type="text" maxlength="300" placeholder="Ex.: Olá, Lucas! Vi a postagem sobre a turma de agosto…">
-        <div style="display:flex; gap:10px; margin-top:22px;">
-          <button class="btn" id="btn-save-post" type="button">SALVAR POSTAGEM</button>
-          <button class="btn btn-ghost" id="btn-cancel-post" type="button">CANCELAR</button>
-        </div>
-        <div id="post-status" class="status"></div>
-      </div>
-    </section>
-
-    <!-- ----------------------- CONFIGURAÇÕES ----------------------- -->
-    <section id="tab-settings" class="card" hidden style="border-radius:0 14px 14px 14px; padding:26px;">
-      <h2 style="margin:0; font-size:20px;">MECANISMO DO <span class="gold">SITE</span></h2>
-      <div class="hint">Estes valores valem para todos os botões do site, sem precisar mexer em código.</div>
-      <label for="s-whatsapp">NÚMERO DO WHATSAPP</label>
-      <input id="s-whatsapp" type="text" placeholder="5573981132052">
-      <div class="hint">Somente dígitos: código do país (55) + DDD + número. Ex.: 5573981132052</div>
-      <label for="s-instagram">USUÁRIO DO INSTAGRAM</label>
-      <input id="s-instagram" type="text" placeholder="lucasgoncalves.personal">
-      <div class="hint">Sem o @. É para onde os botões “Ir para o Instagram” apontam.</div>
-      <button class="btn" id="btn-save-settings" type="button" style="margin-top:22px;">SALVAR CONFIGURAÇÕES</button>
-      <div id="settings-status" class="status"></div>
-    </section>
-  </main>
+  <div id="main">
+    <header id="topbar">
+      <h1 id="page-title">Dashboard</h1>
+      <div id="topbar-actions"></div>
+    </header>
+    <div id="banners"></div>
+    <main id="view"></main>
+  </div>
 </div>
 
-<script>
-var TOKEN_KEY = 'lg_admin_token';
-var content = { settings: { whatsapp: '', instagram: '' }, posts: [] };
-var editingId = null;   // id da postagem em edição (null = nova)
-var editorImg = '';     // URL da imagem escolhida no editor
-
-function $(id){ return document.getElementById(id); }
-function token(){ return localStorage.getItem(TOKEN_KEY) || ''; }
-
-function esc(s){
-  return String(s).replace(/[&<>"']/g, function(c){
-    return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
-  });
-}
-
-function api(path, opts){
-  opts = opts || {};
-  opts.headers = Object.assign({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token() }, opts.headers || {});
-  return fetch(path, opts).then(function(r){
-    return r.json().catch(function(){ return {}; }).then(function(j){
-      if (r.status === 401 && path !== '/api/login') { logout(); throw new Error(j.error || 'Sessão expirada.'); }
-      if (!r.ok) throw new Error(j.error || ('Erro ' + r.status));
-      return j;
-    });
-  });
-}
-
-function setStatus(id, msg, ok){
-  var n = $(id);
-  n.textContent = msg || '';
-  n.className = 'status ' + (ok ? 'ok' : 'err');
-  if (msg && ok) setTimeout(function(){ if (n.textContent === msg) n.textContent = ''; }, 4000);
-}
-
-/* ------------------------------ sessão ------------------------------ */
-function showApp(){
-  $('login-view').hidden = true;
-  $('app-view').hidden = false;
-  loadContent();
-}
-
-function logout(){
-  localStorage.removeItem(TOKEN_KEY);
-  $('app-view').hidden = true;
-  $('login-view').hidden = false;
-}
-
-$('login-form').addEventListener('submit', function(ev){
-  ev.preventDefault();
-  setStatus('login-status', '');
-  var user = $('login-user').value.trim();
-  var pass = $('login-pass').value;
-  api('/api/login', { method: 'POST', body: JSON.stringify({ user: user, pass: pass }) })
-    .then(function(j){
-      localStorage.setItem(TOKEN_KEY, j.token);
-      $('default-pass-banner').hidden = !(user === 'admin' && pass === 'admin');
-      showApp();
-    })
-    .catch(function(e){ setStatus('login-status', e.message, false); });
-});
-
-$('btn-logout').addEventListener('click', logout);
-
-/* ----------------------------- conteúdo ----------------------------- */
-function loadContent(){
-  api('/api/content').then(function(c){
-    content = { settings: c.settings || {}, posts: c.posts || [] };
-    $('storage-banner').hidden = (c.storage !== false);
-    $('s-whatsapp').value = content.settings.whatsapp || '';
-    $('s-instagram').value = content.settings.instagram || '';
-    renderPosts();
-  }).catch(function(e){ alert('Erro ao carregar conteúdo: ' + e.message); });
-}
-
-function saveContent(){
-  return api('/api/content', { method: 'POST', body: JSON.stringify(content) });
-}
-
-/* ---------------------------- abas ---------------------------- */
-document.querySelectorAll('.tab').forEach(function(t){
-  t.addEventListener('click', function(){
-    document.querySelectorAll('.tab').forEach(function(x){ x.classList.remove('active'); });
-    t.classList.add('active');
-    $('tab-posts').hidden = t.getAttribute('data-tab') !== 'posts';
-    $('tab-settings').hidden = t.getAttribute('data-tab') !== 'settings';
-  });
-});
-
-/* ------------------------- configurações ------------------------- */
-$('btn-save-settings').addEventListener('click', function(){
-  var wa = $('s-whatsapp').value.replace(/\D/g, '');
-  if (wa.length < 12) { setStatus('settings-status', 'Número inválido: use país + DDD + número, só dígitos (ex.: 5573981132052).', false); return; }
-  content.settings.whatsapp = wa;
-  content.settings.instagram = $('s-instagram').value.replace(/^@/, '').trim();
-  $('btn-save-settings').disabled = true;
-  saveContent()
-    .then(function(){ setStatus('settings-status', 'Configurações salvas! O site já está usando os novos valores.', true); })
-    .catch(function(e){ setStatus('settings-status', e.message, false); })
-    .then(function(){ $('btn-save-settings').disabled = false; });
-});
-
-/* --------------------------- postagens --------------------------- */
-function renderPosts(){
-  var list = $('post-list');
-  var posts = content.posts.slice().sort(function(a, b){ return String(b.date).localeCompare(String(a.date)); });
-  $('posts-count').textContent = posts.length ? '(' + posts.length + ')' : '';
-  if (!posts.length) {
-    list.innerHTML = '<div class="hint">Nenhuma postagem ainda. Clique em “+ Nova postagem”.</div>';
-    return;
-  }
-  list.innerHTML = posts.map(function(p){
-    var d = new Date(p.date);
-    var when = isNaN(d) ? '' : d.toLocaleDateString('pt-BR');
-    return '<div style="display:flex; gap:14px; align-items:center; border:1px solid rgba(201,162,39,0.18); border-radius:10px; padding:12px 14px;">'
-      + (p.img ? '<img src="' + esc(p.img) + '" alt="" style="width:56px; height:56px; object-fit:cover; border-radius:8px; flex:none;">'
-               : '<div style="width:56px; height:56px; border-radius:8px; background:#16130d; flex:none;"></div>')
-      + '<div style="flex:1; min-width:0;">'
-      +   '<div style="font-family:\'Oswald\',sans-serif; font-weight:600; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' + esc(p.title) + '</div>'
-      +   '<div style="font-size:12px; color:#8A857B;">' + esc(p.kicker || '') + (p.kicker && when ? ' • ' : '') + when + '</div>'
-      + '</div>'
-      + '<button class="btn btn-ghost" style="padding:8px 14px;" data-edit="' + esc(p.id) + '" type="button">EDITAR</button>'
-      + '<button class="btn btn-danger" style="padding:8px 14px;" data-del="' + esc(p.id) + '" type="button">EXCLUIR</button>'
-      + '</div>';
-  }).join('');
-}
-
-$('post-list').addEventListener('click', function(ev){
-  var b = ev.target.closest('[data-edit]');
-  if (b) { openEditor(b.getAttribute('data-edit')); return; }
-  b = ev.target.closest('[data-del]');
-  if (b) {
-    var id = b.getAttribute('data-del');
-    var p = content.posts.find(function(x){ return x.id === id; });
-    if (!p || !confirm('Excluir a postagem "' + p.title + '"?')) return;
-    content.posts = content.posts.filter(function(x){ return x.id !== id; });
-    saveContent().then(renderPosts).catch(function(e){ alert(e.message); loadContent(); });
-  }
-});
-
-function openEditor(id){
-  editingId = id || null;
-  var p = content.posts.find(function(x){ return x.id === id; }) || {};
-  $('editor-title').textContent = editingId ? 'EDITAR POSTAGEM' : 'NOVA POSTAGEM';
-  $('p-title').value = p.title || '';
-  $('p-kicker').value = p.kicker || '';
-  $('p-text').value = p.text || '';
-  $('p-cta').value = p.cta || '';
-  $('p-msg').value = p.msg || '';
-  editorImg = p.img || '';
-  $('p-img-file').value = '';
-  updateImgPreview();
-  setStatus('post-status', '');
-  $('post-editor').hidden = false;
-  $('post-editor').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function updateImgPreview(){
-  $('p-img-preview').hidden = !editorImg;
-  $('p-img-clear').hidden = !editorImg;
-  if (editorImg) $('p-img-preview').src = editorImg;
-}
-
-$('btn-new-post').addEventListener('click', function(){ openEditor(null); });
-$('btn-cancel-post').addEventListener('click', function(){ $('post-editor').hidden = true; });
-$('p-img-clear').addEventListener('click', function(){ editorImg = ''; $('p-img-file').value = ''; updateImgPreview(); });
-
-// Reduz a imagem no navegador (máx. 1600px, WebP/JPEG) e envia para /api/upload.
-$('p-img-file').addEventListener('change', function(){
-  var file = this.files && this.files[0];
-  if (!file) return;
-  setStatus('post-status', 'Enviando imagem…', true);
-  shrinkImage(file).then(function(out){
-    return api('/api/upload', { method: 'POST', body: JSON.stringify(out) });
-  }).then(function(j){
-    editorImg = j.url;
-    updateImgPreview();
-    setStatus('post-status', 'Imagem enviada!', true);
-  }).catch(function(e){ setStatus('post-status', 'Erro no envio: ' + e.message, false); });
-});
-
-function shrinkImage(file){
-  return createImageBitmap(file).then(function(bmp){
-    var MAX = 1600;
-    var scale = Math.min(1, MAX / Math.max(bmp.width, bmp.height));
-    var canvas = document.createElement('canvas');
-    canvas.width = Math.round(bmp.width * scale);
-    canvas.height = Math.round(bmp.height * scale);
-    canvas.getContext('2d').drawImage(bmp, 0, 0, canvas.width, canvas.height);
-    return new Promise(function(resolve, reject){
-      canvas.toBlob(function(blob){
-        if (!blob) return reject(new Error('Falha ao processar a imagem.'));
-        var fr = new FileReader();
-        fr.onload = function(){
-          resolve({ name: file.name, type: blob.type, data: String(fr.result).split(',')[1] });
-        };
-        fr.onerror = function(){ reject(new Error('Falha ao ler a imagem.')); };
-        fr.readAsDataURL(blob);
-      }, 'image/webp', 0.85);
-    });
-  });
-}
-
-$('btn-save-post').addEventListener('click', function(){
-  var title = $('p-title').value.trim();
-  var text = $('p-text').value.trim();
-  if (!title || !text) { setStatus('post-status', 'Preencha pelo menos o título e o texto.', false); return; }
-  var p = {
-    id: editingId || String(Date.now()),
-    title: title,
-    kicker: $('p-kicker').value.trim(),
-    text: text,
-    img: editorImg,
-    cta: $('p-cta').value.trim(),
-    msg: $('p-msg').value.trim(),
-    date: editingId ? (content.posts.find(function(x){ return x.id === editingId; }) || {}).date || new Date().toISOString()
-                    : new Date().toISOString()
-  };
-  if (editingId) {
-    content.posts = content.posts.map(function(x){ return x.id === editingId ? p : x; });
-  } else {
-    content.posts.push(p);
-  }
-  $('btn-save-post').disabled = true;
-  saveContent().then(function(){
-    $('post-editor').hidden = true;
-    renderPosts();
-    setStatus('post-status', '', true);
-  }).catch(function(e){
-    setStatus('post-status', e.message, false);
-    loadContent();
-  }).then(function(){ $('btn-save-post').disabled = false; });
-});
-
-/* ------------------------------ boot ------------------------------ */
-if (token()) showApp();
-</script>
+<div id="toast"></div>
+<script src="admin/admin.js"></script>
 </body>
 </html>

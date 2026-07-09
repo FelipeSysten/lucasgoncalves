@@ -83,5 +83,35 @@
   "key": "svc-personal",
   "label": "Serviço — Personal Presencial",
   "default": "assets/svc-personal.png"
+ },
+ {
+  "key": "poster-consultoria",
+  "label": "Modal — Consultoria Online",
+  "default": "assets/poster-consultoria.png"
+ },
+ {
+  "key": "detalhe",
+  "label": "Modal — Personal Presencial",
+  "default": "assets/detalhe.webp"
+ },
+ {
+  "key": "poster-avaliacao",
+  "label": "Modal — Avaliação Física",
+  "default": "assets/poster-avaliacao.png"
+ },
+ {
+  "key": "poster-nutricional",
+  "label": "Modal — Nutricional",
+  "default": "assets/poster-nutricional.png"
+ },
+ {
+  "key": "oferta",
+  "label": "Modal — Oferta R$97",
+  "default": "assets/oferta.png"
+ },
+ {
+  "key": "oferta-gym",
+  "label": "Modal — Contato",
+  "default": "assets/oferta-gym.png"
  }
 ]
