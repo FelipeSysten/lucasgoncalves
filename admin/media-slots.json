@@ -62,7 +62,7 @@
  {
   "key": "sobre",
   "label": "Sobre — foto",
-  "default": "assets/sobre.png"
+  "default": "assets/sobre.jpg"
  },
  {
   "key": "svc-avaliacao",
