@@ -2,13 +2,8 @@
  "consultoria": {
   "kicker": "SERVIÇO",
   "title": "CONSULTORIA ONLINE",
-  "desc": "Treine de qualquer lugar com um plano 100% individualizado. Montagem de treino, ajustes contínuos e acompanhamento direto pelo aplicativo.",
-  "points": [
-   "Treino personalizado no aplicativo",
-   "Ajustes e progressão contínuos",
-   "Suporte direto com o Lucas",
-   "Acesso a vídeos de execução"
-  ],
+  "desc": "",
+  "points": [],
   "cta": "QUERO COMEÇAR",
   "ctaNote": "Comece sua transformação hoje mesmo.",
   "msg": "Olá, Lucas! Quero começar na Consultoria Online.",

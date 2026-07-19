@@ -386,6 +386,7 @@
           <div style="font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; color:#fff; margin-bottom:14px;"><span data-text="detail-incluso">O QUE ESTÁ INCLUSO</span></div>
           <div id="m-detail-points-list" style="display:flex; flex-direction:column; gap:10px;"></div>
         </div>
+        <div id="m-detail-extra" hidden style="margin-bottom:24px;"></div>
         <div style="background:linear-gradient(160deg,var(--c-sc),var(--c-sd)); border:1px solid rgba(var(--c-primary-rgb),0.30); border-radius:14px; padding:20px; text-align:center;">
           <div id="m-detail-ctanote" style="font-size:13px; color:#A9A399; margin-bottom:10px;"></div>
           <button id="m-detail-cta" data-wa="contato" style="width:100%; padding:16px; background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark)); border:none; border-radius:10px; color:var(--c-bg); font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:1px; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;"><span id="m-detail-cta-label"></span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0908" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
@@ -764,6 +765,7 @@
               <div style="font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; margin-bottom:14px;"><span data-text="detail-incluso">O QUE ESTÁ INCLUSO</span></div>
               <div id="d-detail-points-list" style="display:flex; flex-direction:column; gap:10px;"></div>
             </div>
+            <div id="d-detail-extra" hidden style="margin-bottom:26px;"></div>
             <div id="d-detail-ctanote" style="font-size:13px; color:#A9A399; margin-bottom:14px;"></div>
             <button id="d-detail-cta" data-wa="contato" style="width:100%; padding:16px; background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark)); border:none; border-radius:10px; color:var(--c-bg); font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:1px; font-size:15px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;"><span id="d-detail-cta-label"></span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0908" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
           </div>
@@ -788,7 +790,18 @@ var WHATSAPP  = '5573981132052';
 var INSTAGRAM = 'llucas_goncalves';
 
 var DETAILS = {
-  consultoria: { kicker: 'SERVIÇO', title: 'CONSULTORIA ONLINE', desc: 'Treine de qualquer lugar com um plano 100% individualizado. Montagem de treino, ajustes contínuos e acompanhamento direto pelo aplicativo.', points: ['Treino personalizado no aplicativo', 'Ajustes e progressão contínuos', 'Suporte direto com o Lucas', 'Acesso a vídeos de execução'], cta: 'QUERO COMEÇAR', ctaNote: 'Comece sua transformação hoje mesmo.', img: 'assets/poster-consultoria.png', msg: 'Olá, Lucas! Quero começar na Consultoria Online.' },
+  consultoria: { kicker: 'SERVIÇO', title: 'CONSULTORIA ONLINE', desc: '', points: [],
+    features: [
+      { icon: 'play-circle', label: 'VÍDEOS DE TREINO' },
+      { icon: 'clipboard-list', label: 'MÉTODOS DE TREINO INDIVIDUALIZADOS' },
+      { icon: 'smartphone', label: 'APLICATIVO COMPLETO MFIT PERSONAL' },
+      { icon: 'refresh-cw', label: 'TREINO QUE ATUALIZA MENSALMENTE' },
+      { icon: 'user-check', label: 'AVALIAÇÃO FÍSICA ONLINE' }
+    ],
+    headline1: 'TREINO INTELIGENTE.', headline2: 'RESULTADOS REAIS.',
+    subtext: 'Acompanhamento completo para você treinar com estratégia, foco e consistência. Seu objetivo é o nosso compromisso.',
+    results: ['assets/resultado-1.jpg', 'assets/resultado-3.jpg', 'assets/resultado-5.jpg', 'assets/resultado-7.jpg'],
+    cta: 'QUERO COMEÇAR', ctaNote: 'Comece sua transformação hoje mesmo.', img: 'assets/poster-consultoria.png', msg: 'Olá, Lucas! Quero começar na Consultoria Online.' },
   personalpresencial: { kicker: 'ATENDIMENTO EXCLUSIVO', title: 'PERSONAL PRESENCIAL', desc: 'Treino personalizado ao vivo com acompanhamento direto e foco total em resultados. Supervisão profissional em cada exercício.', points: ['Acompanhamento ao vivo, presencial', 'Correção de execução em tempo real', 'Periodização personalizada', 'Foco total na sua evolução'], cta: 'FALAR NO WHATSAPP', ctaNote: 'Atendimento exclusivo e limitado. Fale comigo para verificar disponibilidade.', img: 'assets/detalhe.webp', msg: 'Olá, Lucas! Tenho interesse no Personal Presencial. Ainda há disponibilidade?' },
   avaliacao: { kicker: 'SERVIÇO', title: 'AVALIAÇÃO FÍSICA', desc: 'Análise completa da sua composição corporal e do seu condicionamento para construir um plano 100% personalizado.', points: ['Anamnese', 'Avaliação física (dobras cutâneas)', 'Avaliação da força e resistência', 'Condicionamento aeróbico'], cta: 'AGENDAR AVALIAÇÃO', ctaNote: 'Agende sua avaliação física completa.', img: 'assets/poster-avaliacao.png', msg: 'Olá, Lucas! Quero agendar uma Avaliação Física.' },
   nutricional: { kicker: 'EM BREVE', title: 'ATENDIMENTO NUTRICIONAL ONLINE', desc: 'Em breve: a nutrição certa para potencializar seus resultados, integrada ao seu treino.', points: [], cta: 'QUERO SER AVISADO', ctaNote: 'Entre na lista de espera e seja avisado no lançamento.', img: 'assets/poster-nutricional.png', msg: 'Olá, Lucas! Quero entrar na lista de espera do Atendimento Nutricional Online.' },
@@ -809,15 +822,38 @@ function el(id){ return document.getElementById(id); }
 function lockScroll(on){ document.body.style.overflow = on ? 'hidden' : ''; }
 function setMenu(open){ var n = el('m-menu'); if (n) n.hidden = !open; }
 
+function renderDetailExtra(d){
+  if (!d.features || !d.features.length) return '';
+  var tiles = d.features.map(function(f){
+    return '<div style="flex:1 1 30%; min-width:96px; background:linear-gradient(135deg,var(--c-sa),var(--c-sb)); border:1px solid rgba(var(--c-primary-rgb),0.35); border-radius:12px; padding:14px 8px; text-align:center;">'
+      + '<i data-lucide="' + f.icon + '" width="26" height="26" style="color:var(--c-primary);"></i>'
+      + '<div style="font-family:\'Oswald\',sans-serif; font-weight:500; font-size:10px; letter-spacing:1px; color:#D8D2C7; margin-top:8px; line-height:1.35;">' + escHtml(f.label) + '</div>'
+      + '</div>';
+  }).join('');
+  var out = '<div style="display:flex; flex-wrap:wrap; gap:10px;">' + tiles + '</div>';
+  if (d.headline1 || d.headline2) {
+    out += '<div style="margin-top:20px; font-family:\'Oswald\',sans-serif; font-weight:700; font-size:22px; letter-spacing:0.5px; line-height:1.2;">' + escHtml(d.headline1 || '') + '<br><span style="color:var(--c-primary);">' + escHtml(d.headline2 || '') + '</span></div>';
+  }
+  if (d.subtext) out += '<p style="margin:10px 0 0; font-size:13.5px; color:#BDB7AC; line-height:1.6;">' + escHtml(d.subtext) + '</p>';
+  if (d.results && d.results.length) {
+    out += '<div style="display:flex; gap:10px; overflow-x:auto; margin-top:16px; padding-bottom:4px;">'
+      + d.results.map(function(u){ return '<img src="' + escHtml(u) + '" alt="Antes e depois de aluno" style="width:120px; height:120px; object-fit:cover; border-radius:10px; border:1px solid rgba(var(--c-primary-rgb),0.3); flex:none;">'; }).join('')
+      + '</div>';
+  }
+  return out;
+}
+
 function fillDetail(id){
   var d = DETAILS[id];
   if (!d) return false;
+  var extraHtml = renderDetailExtra(d);
   ['m', 'd'].forEach(function(p){
     function g(s){ return el(p + '-detail-' + s); }
     g('img').src = d.img; g('img').alt = d.title;
     g('kicker').textContent = d.kicker;
     g('title').textContent = d.title;
     g('desc').textContent = d.desc;
+    g('desc').hidden = !d.desc;
     g('ctanote').textContent = d.ctaNote;
     g('cta-label').textContent = d.cta;
     g('cta').setAttribute('data-wa', id);
@@ -828,7 +864,10 @@ function fillDetail(id){
         ? '<div style="display:flex; align-items:flex-start; gap:12px; padding:14px; background:linear-gradient(135deg,var(--c-sa),var(--c-sb)); border:1px solid rgba(var(--c-primary-rgb),0.22); border-radius:10px;">' + CHECK + '<span style="font-size:13.5px; color:#D8D2C7; line-height:1.45;">' + pt + '</span></div>'
         : '<div style="display:flex; align-items:flex-start; gap:12px;">' + CHECK + '<span style="font-size:14px; color:#D8D2C7; line-height:1.45;">' + pt + '</span></div>';
     }).join('');
+    g('extra').innerHTML = extraHtml;
+    g('extra').hidden = !extraHtml;
   });
+  try { window.lucide && window.lucide.createIcons(); } catch (e) {}
   return true;
 }
 
@@ -998,6 +1037,7 @@ function applyImages(map){
     Object.keys(DETAILS).forEach(function(id){
       var im = DETAILS[id].img || '';
       if (im.indexOf('assets/' + k + '.') === 0) DETAILS[id].img = v;
+      if (Array.isArray(DETAILS[id].results)) DETAILS[id].results = DETAILS[id].results.map(function(r2){ return r2.indexOf('assets/' + k + '.') === 0 ? v : r2; });
     });
   });
 }
