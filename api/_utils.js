@@ -51,7 +51,7 @@ function authed(req) {
 const DEFAULT_CONTENT = {
   settings: {
     whatsapp: '5573981132052',
-    instagram: 'lucasgoncalves.personal',
+    instagram: 'llucas_goncalves',
     appearance: {
       primary: '#C9A227',    // dourado da marca
       secondary: '#F3DD8E',  // tom claro dos gradientes

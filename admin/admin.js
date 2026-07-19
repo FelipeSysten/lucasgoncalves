@@ -602,7 +602,7 @@ function viewSettings() {
       '<input id="s-whatsapp" type="text" value="' + esc(s.whatsapp || '') + '" placeholder="5573981132052">' +
       '<div class="hint">Somente dígitos: país (55) + DDD + número. Vale para todos os botões do site.</div>' +
       '<label for="s-instagram">USUÁRIO DO INSTAGRAM</label>' +
-      '<input id="s-instagram" type="text" value="' + esc(s.instagram || '') + '" placeholder="lucasgoncalves.personal">' +
+      '<input id="s-instagram" type="text" value="' + esc(s.instagram || '') + '" placeholder="llucas_goncalves">' +
       '<div class="hint">Sem o @. Os botões e o @ exibido no site seguem este valor.</div>' +
       '<button class="btn" id="btn-save-settings" type="button" style="margin-top:22px;">SALVAR CONFIGURAÇÕES</button>' +
     '</div>';
