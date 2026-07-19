@@ -50,16 +50,6 @@
   "default": "assets/prog-pump100.png"
  },
  {
-  "key": "resultado-1",
-  "label": "Resultados — foto 1",
-  "default": "assets/resultado-1.png"
- },
- {
-  "key": "resultado-2",
-  "label": "Resultados — foto 2",
-  "default": "assets/resultado-2.png"
- },
- {
   "key": "sobre",
   "label": "Sobre — foto",
   "default": "assets/sobre.jpg"
@@ -113,5 +103,50 @@
   "key": "oferta-gym",
   "label": "Modal — Contato",
   "default": "assets/oferta-gym.png"
+ },
+ {
+  "key": "resultado-1",
+  "label": "Resultados — card 1",
+  "default": "assets/resultado-1.jpg"
+ },
+ {
+  "key": "resultado-2",
+  "label": "Resultados — card 2",
+  "default": "assets/resultado-2.jpg"
+ },
+ {
+  "key": "resultado-3",
+  "label": "Resultados — card 3",
+  "default": "assets/resultado-3.jpg"
+ },
+ {
+  "key": "resultado-4",
+  "label": "Resultados — card 4",
+  "default": "assets/resultado-4.jpg"
+ },
+ {
+  "key": "resultado-5",
+  "label": "Resultados — card 5",
+  "default": "assets/resultado-5.jpg"
+ },
+ {
+  "key": "resultado-6",
+  "label": "Resultados — card 6",
+  "default": "assets/resultado-6.jpg"
+ },
+ {
+  "key": "resultado-7",
+  "label": "Resultados — card 7",
+  "default": "assets/resultado-7.jpg"
+ },
+ {
+  "key": "resultado-8",
+  "label": "Resultados — card 8",
+  "default": "assets/resultado-8.jpg"
+ },
+ {
+  "key": "resultado-9",
+  "label": "Resultados — card 9",
+  "default": "assets/resultado-9.jpg"
  }
 ]

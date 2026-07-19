@@ -33,6 +33,14 @@
   }
   svg[stroke="#C9A227"]{ stroke:var(--c-primary); }
   svg[stroke="#0A0908"]{ stroke:var(--c-bg); }
+  .res-slider{ overflow:hidden; width:100%; }
+  .res-track{ display:flex; gap:14px; width:max-content; animation:resScroll 55s linear infinite; }
+  .res-set{ display:flex; gap:14px; }
+  .res-slider:hover .res-track, .res-slider:active .res-track{ animation-play-state:paused; }
+  .res-card{ width:min(78vw, 340px); aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid rgba(var(--c-primary-rgb),0.25); display:block; flex:none; }
+  @media (min-width:1020px){ .res-card{ width:360px; } }
+  @keyframes resScroll{ from{ transform:translateX(0); } to{ transform:translateX(calc(-50% - 7px)); } }
+  @media (prefers-reduced-motion: reduce){ .res-track{ animation:none; } .res-slider{ overflow-x:auto; } }
   #lg-desktop{ display:none; }
   @media (min-width:1020px){
     #lg-desktop{ display:block; }
@@ -73,6 +81,15 @@
         <span data-text="cta-servicos">6 MESES DE TREINO EXCLUSIVO</span>
         <i data-lucide="arrow-right" width="18" height="18" style="color:var(--c-primary);"></i>
       </button>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTADOS REAIS (slider) ===================== -->
+  <section style="padding:42px 0 8px;">
+    <h2 style="margin:0 0 18px; padding:0 18px; font-family:'Oswald',sans-serif; font-weight:700; font-size:26px; letter-spacing:1px;"><span data-text="resultados-t1">RESULTADOS</span> <span style="color:var(--c-primary);" data-text="resultados-t2">REAIS</span></h2>
+    <div class="res-slider"><div class="res-track"><div class="res-set"><img class="res-card" data-slot="resultado-1" src="assets/resultado-1.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-2" src="assets/resultado-2.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-3" src="assets/resultado-3.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-4" src="assets/resultado-4.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-5" src="assets/resultado-5.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-6" src="assets/resultado-6.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-7" src="assets/resultado-7.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-8" src="assets/resultado-8.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-9" src="assets/resultado-9.jpg" alt="Antes e depois de aluno"></div><div class="res-set" aria-hidden="true"><img class="res-card" data-slot="resultado-1" src="assets/resultado-1.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-2" src="assets/resultado-2.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-3" src="assets/resultado-3.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-4" src="assets/resultado-4.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-5" src="assets/resultado-5.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-6" src="assets/resultado-6.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-7" src="assets/resultado-7.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-8" src="assets/resultado-8.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-9" src="assets/resultado-9.jpg" alt="Antes e depois de aluno"></div></div></div>
+    <div style="padding:18px 18px 0;">
+      <button data-detail="resultados" style="width:100%; padding:15px; background:rgba(var(--c-bg-rgb),0.5); border:1.5px solid var(--c-primary); border-radius:8px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;"><span data-text="resultados-cta">VER MAIS RESULTADOS</span> <i data-lucide="arrow-right" width="16" height="16" style="color:var(--c-primary);"></i></button>
     </div>
   </section>
 
@@ -177,18 +194,6 @@
         </button>
       </div>
     </div>
-  </section>
-
-  <!-- ===================== RESULTADOS REAIS ===================== -->
-  <section style="padding:8px 18px 36px;">
-    <h2 style="margin:0 0 18px; font-family:'Oswald',sans-serif; font-weight:700; font-size:26px; letter-spacing:1px;"><span data-text="resultados-t1">RESULTADOS</span> <span style="color:var(--c-primary);" data-text="resultados-t2">REAIS</span></h2>
-    <div style="display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:18px;">
-      <img data-slot="resultado-1" src="assets/resultado-1.png" alt="Antes e depois" style="width:100%; height:auto; aspect-ratio:1800/873; object-fit:cover; border-radius:10px; display:block; border:1px solid rgba(var(--c-primary-rgb),0.25);">
-      <img data-slot="resultado-2" src="assets/resultado-2.png" alt="Antes e depois" style="width:100%; height:auto; aspect-ratio:1800/873; object-fit:cover; border-radius:10px; display:block; border:1px solid rgba(var(--c-primary-rgb),0.25);">
-    </div>
-    <button data-detail="resultados" style="width:100%; padding:15px; background:rgba(var(--c-bg-rgb),0.5); border:1.5px solid var(--c-primary); border-radius:8px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;">
-      <span data-text="resultados-cta">VER MAIS RESULTADOS</span> <i data-lucide="arrow-right" width="16" height="16" style="color:var(--c-primary);"></i>
-    </button>
   </section>
 
   <!-- ===================== SOBRE MIM ===================== -->
@@ -455,6 +460,18 @@
     </div>
   </section>
 
+  <!-- ===================== RESULTADOS REAIS (slider) ===================== -->
+  <section id="resultados" style="padding:76px 0 6px; overflow:hidden;">
+    <div style="text-align:center; margin-bottom:40px; padding:0 40px;">
+      <div style="font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:5px; font-size:12px; color:var(--c-primary); margin-bottom:10px;"><span data-text="d-resultados-kicker">— TRANSFORMAÇÕES —</span></div>
+      <h2 style="margin:0; font-family:'Oswald',sans-serif; font-weight:700; font-size:46px;"><span data-text="resultados-t1">RESULTADOS</span> <span style="color:var(--c-primary);" data-text="resultados-t2">REAIS</span></h2>
+    </div>
+    <div class="res-slider"><div class="res-track"><div class="res-set"><img class="res-card" data-slot="resultado-1" src="assets/resultado-1.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-2" src="assets/resultado-2.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-3" src="assets/resultado-3.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-4" src="assets/resultado-4.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-5" src="assets/resultado-5.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-6" src="assets/resultado-6.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-7" src="assets/resultado-7.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-8" src="assets/resultado-8.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-9" src="assets/resultado-9.jpg" alt="Antes e depois de aluno"></div><div class="res-set" aria-hidden="true"><img class="res-card" data-slot="resultado-1" src="assets/resultado-1.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-2" src="assets/resultado-2.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-3" src="assets/resultado-3.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-4" src="assets/resultado-4.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-5" src="assets/resultado-5.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-6" src="assets/resultado-6.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-7" src="assets/resultado-7.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-8" src="assets/resultado-8.jpg" alt="Antes e depois de aluno"><img class="res-card" data-slot="resultado-9" src="assets/resultado-9.jpg" alt="Antes e depois de aluno"></div></div></div>
+    <div style="text-align:center; margin-top:36px; padding:0 40px;">
+      <button data-detail="resultados" style="display:inline-flex; align-items:center; gap:12px; padding:16px 40px; background:transparent; border:1.5px solid var(--c-primary); border-radius:8px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:14px; cursor:pointer;"><span data-text="resultados-cta">VER MAIS RESULTADOS</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+    </div>
+  </section>
+
   <!-- ===================== SERVIÇOS ===================== -->
   <section id="servicos" style="max-width:1240px; margin:0 auto; padding:90px 40px 30px;">
     <div style="text-align:center; margin-bottom:54px;">
@@ -644,17 +661,6 @@
     </div>
   </section>
 
-  <!-- ===================== RESULTADOS ===================== -->
-  <section id="resultados" style="max-width:1240px; margin:0 auto; padding:30px 40px 80px; text-align:center;">
-    <div style="font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:5px; font-size:12px; color:var(--c-primary); margin-bottom:10px;"><span data-text="d-resultados-kicker">— TRANSFORMAÇÕES —</span></div>
-    <h2 style="margin:0 0 40px; font-family:'Oswald',sans-serif; font-weight:700; font-size:46px;"><span data-text="resultados-t1">RESULTADOS</span> <span style="color:var(--c-primary);" data-text="resultados-t2">REAIS</span></h2>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:40px;">
-      <img data-slot="resultado-1" src="assets/resultado-1.png" alt="Antes e depois" style="width:100%; height:280px; object-fit:cover; border-radius:14px; display:block; border:1px solid rgba(var(--c-primary-rgb),0.25);">
-      <img data-slot="resultado-2" src="assets/resultado-2.png" alt="Antes e depois" style="width:100%; height:280px; object-fit:cover; border-radius:14px; display:block; border:1px solid rgba(var(--c-primary-rgb),0.25);">
-    </div>
-    <button data-detail="resultados" style="display:inline-flex; align-items:center; gap:12px; padding:16px 40px; background:transparent; border:1.5px solid var(--c-primary); border-radius:8px; color:#fff; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:14px; cursor:pointer;"><span data-text="resultados-cta">VER MAIS RESULTADOS</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
-  </section>
-
   <!-- ===================== SOBRE ===================== -->
   <section id="sobre" style="background:linear-gradient(180deg,var(--c-sb),var(--c-bg)); border-top:1px solid rgba(var(--c-primary-rgb),0.12); border-bottom:1px solid rgba(var(--c-primary-rgb),0.12);">
     <div style="max-width:1240px; margin:0 auto; padding:80px 40px; display:grid; grid-template-columns:480px 1fr; gap:60px; align-items:center;">
@@ -792,7 +798,7 @@ var DETAILS = {
   gorilla: { kicker: 'GANHO DE FORÇA', title: 'GORILLA STRENGTH', desc: 'Programa focado em força máxima, performance e evolução constante.', points: ['Periodização de força', 'Foco em performance', 'Progressão de cargas planejada', 'Acompanhamento pelo app'], cta: 'QUERO O GORILLA', ctaNote: 'Evolua sua força de forma constante.', img: 'assets/prog-gorilla.png', msg: 'Olá, Lucas! Quero começar o GORILLA STRENGTH.' },
   pump100: { kicker: 'HIPERTROFIA', title: 'PUMP 100', desc: 'Métodos avançados de treino para maximizar o ganho de massa muscular.', points: ['Métodos avançados de hipertrofia', 'Volume e intensidade otimizados', 'Progressão planejada', 'Acompanhamento pelo app'], cta: 'QUERO O PUMP 100', ctaNote: 'Maximize seu ganho de massa.', img: 'assets/prog-pump100.png', msg: 'Olá, Lucas! Quero começar o PUMP 100.' },
   consultoriapremium: { kicker: 'ONLINE', title: 'CONSULTORIA PREMIUM', desc: 'Acompanhamento individualizado 100% online com suporte diário e ajustes estratégicos.', points: ['Suporte diário com o Lucas', 'Ajustes estratégicos contínuos', 'Plano de treino e dieta', 'Acompanhamento premium pelo app'], cta: 'FALAR NO WHATSAPP', ctaNote: 'Vagas limitadas. Fale comigo para verificar disponibilidade.', img: 'assets/prog-premium.png', msg: 'Olá, Lucas! Tenho interesse na Consultoria Premium. Ainda há vagas?' },
-  resultados: { kicker: 'TRANSFORMAÇÕES', title: 'RESULTADOS REAIS', desc: 'Resultados reais de alunos que confiaram no método e transformaram o corpo e a vida.', points: [], cta: 'QUERO ESSES RESULTADOS', ctaNote: 'Seja o próximo resultado real.', img: 'assets/resultado-1.png', msg: 'Olá, Lucas! Vi os resultados no site e quero começar minha transformação.' },
+  resultados: { kicker: 'TRANSFORMAÇÕES', title: 'RESULTADOS REAIS', desc: 'Resultados reais de alunos que confiaram no método e transformaram o corpo e a vida.', points: [], cta: 'QUERO ESSES RESULTADOS', ctaNote: 'Seja o próximo resultado real.', img: 'assets/resultado-1.jpg', msg: 'Olá, Lucas! Vi os resultados no site e quero começar minha transformação.' },
   sobre: { kicker: 'SOBRE MIM', title: 'LUCAS GONÇALVES', desc: 'Sou Lucas Gonçalves, personal trainer e especialista em hipertrofia, emagrecimento e performance. Meu objetivo é transformar vidas através de método, disciplina e acompanhamento individualizado.', points: ['+500 alunos transformados', 'Experiência comprovada', 'Atendimento individualizado', 'Método que gera resultado'], cta: 'FALAR COMIGO', ctaNote: 'Vamos construir o seu resultado juntos.', img: 'assets/sobre.jpg', msg: 'Olá, Lucas! Vim pelo site e quero saber mais sobre o seu acompanhamento.' },
   contato: { kicker: 'CONTATO', title: 'FALE COMIGO', desc: 'Tire suas dúvidas e dê o primeiro passo. Me chame no WhatsApp e vamos montar o melhor caminho para você.', points: [], cta: 'CHAMAR NO WHATSAPP', ctaNote: 'Resposta rápida no horário comercial.', img: 'assets/oferta-gym.png', msg: 'Olá, Lucas! Vim pelo site e quero mais informações.' }
 };
