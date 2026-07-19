@@ -18,42 +18,6 @@
   "default": "Transforme seu corpo e sua vida com método, disciplina e acompanhamento individualizado. Resultados de verdade, do seu jeito."
  },
  {
-  "key": "d-stat1-label",
-  "label": "Hero — estatística 1 (rótulo)",
-  "group": "Hero (topo)",
-  "default": "ALUNOS TRANSFORMADOS"
- },
- {
-  "key": "d-stat1-num",
-  "label": "Hero — estatística 1 (número)",
-  "group": "Hero (topo)",
-  "default": "+500"
- },
- {
-  "key": "d-stat2-label",
-  "label": "Hero — estatística 2 (rótulo)",
-  "group": "Hero (topo)",
-  "default": "PROGRAMAS EXCLUSIVOS"
- },
- {
-  "key": "d-stat2-num",
-  "label": "Hero — estatística 2 (número)",
-  "group": "Hero (topo)",
-  "default": "6"
- },
- {
-  "key": "d-stat3-label",
-  "label": "Hero — estatística 3 (rótulo)",
-  "group": "Hero (topo)",
-  "default": "INDIVIDUALIZADO"
- },
- {
-  "key": "d-stat3-num",
-  "label": "Hero — estatística 3 (número)",
-  "group": "Hero (topo)",
-  "default": "100%"
- },
- {
   "key": "hero-nome-1",
   "label": "Hero — nome (linha dourada)",
   "group": "Hero (topo)",
@@ -565,15 +529,15 @@
  },
  {
   "key": "sobre-stat2",
-  "label": "Sobre — estatística 2",
+  "label": "Destaques (hero e Sobre) — estatística 2",
   "group": "Sobre",
-  "default": "EXPERIÊNCIA"
+  "default": "RESULTADOS"
  },
  {
   "key": "sobre-stat2-sub",
-  "label": "Sobre — estatística 2 (linha 2)",
+  "label": "Destaques (hero e Sobre) — estatística 2 (linha 2)",
   "group": "Sobre",
-  "default": "COMPROVADA"
+  "default": "COMPROVADOS"
  },
  {
   "key": "sobre-stat3",
