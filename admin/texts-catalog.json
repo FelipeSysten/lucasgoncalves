@@ -7,9 +7,9 @@
  },
  {
   "key": "cta-servicos",
-  "label": "Botão “Conhecer serviços”",
+  "label": "Botão principal do topo",
   "group": "Hero (topo)",
-  "default": "CONHECER SERVIÇOS"
+  "default": "6 MESES DE TREINO EXCLUSIVO"
  },
  {
   "key": "d-hero-desc",
@@ -148,6 +148,30 @@
   "label": "Card Nutricional — descrição",
   "group": "Serviços",
   "default": "Em breve: a nutrição certa para potencializar seus resultados."
+ },
+ {
+  "key": "svc-oferta-t1",
+  "label": "Card 6 Meses — título parte 1",
+  "group": "Serviços",
+  "default": "6 MESES DE"
+ },
+ {
+  "key": "svc-oferta-t2",
+  "label": "Card 6 Meses — título parte 2",
+  "group": "Serviços",
+  "default": "TREINO EXCLUSIVO"
+ },
+ {
+  "key": "svc-oferta-desc",
+  "label": "Card 6 Meses — descrição",
+  "group": "Serviços",
+  "default": "Todos os protocolos de treino em um só acesso, por 6 meses."
+ },
+ {
+  "key": "svc-oferta-cta",
+  "label": "Card 6 Meses — link",
+  "group": "Serviços",
+  "default": "VER PROTOCOLOS"
  },
  {
   "key": "svc-nutricional-t1",
