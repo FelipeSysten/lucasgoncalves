@@ -809,7 +809,15 @@ var DETAILS = {
       { nome: 'ANUAL', duracao: '12 MESES', preco: 'R$ 1.000,00', precoNota: 'à vista no Pix ou cartão', miudas: 'ou 12x de R$ 103,84 no cartão', link: 'https://pages.mfitpersonal.com.br/p/200c?checkout=true', destaque: 'MAIS ESCOLHIDO' }
     ],
     cta: 'QUERO COMEÇAR', ctaNote: 'Comece sua transformação hoje mesmo.', img: 'assets/poster-consultoria.png', msg: 'Olá, Lucas! Quero começar na Consultoria Online.' },
-  personalpresencial: { kicker: 'ATENDIMENTO EXCLUSIVO', title: 'PERSONAL PRESENCIAL', desc: 'Treino personalizado ao vivo com acompanhamento direto e foco total em resultados. Supervisão profissional em cada exercício.', points: ['Acompanhamento ao vivo, presencial', 'Correção de execução em tempo real', 'Periodização personalizada', 'Foco total na sua evolução'], cta: 'FALAR NO WHATSAPP', ctaNote: 'Atendimento exclusivo e limitado. Fale comigo para verificar disponibilidade.', img: 'assets/detalhe.webp', msg: 'Olá, Lucas! Tenho interesse no Personal Presencial. Ainda há disponibilidade?' },
+  personalpresencial: { kicker: 'ATENDIMENTO EXCLUSIVO', title: 'PERSONAL PRESENCIAL', desc: 'Treino personalizado ao vivo com acompanhamento direto e foco total em resultados. Supervisão profissional em cada exercício.', points: [],
+    featuresTitle: 'O QUE ESTÁ INCLUSO',
+    features: [
+      { icon: 'clipboard-list', label: 'AVALIAÇÃO FÍSICA', sub: 'Seu ponto de partida, medido com precisão.' },
+      { icon: 'target', label: 'MÉTODOS AVANÇADOS', sub: 'Técnicas que aceleram seus resultados.' },
+      { icon: 'trending-up', label: 'PERIODIZAÇÃO PERSONALIZADA', sub: 'Treino planejado para o seu objetivo.' }
+    ],
+    waLink: 'https://wa.me/message/IQGCMF4P7W7HP1',
+    cta: 'FALAR NO WHATSAPP', ctaNote: 'Atendimento exclusivo e limitado. Fale comigo para verificar disponibilidade.', img: 'assets/poster-personal.png', msg: 'Olá, Lucas! Tenho interesse no Personal Presencial. Ainda há disponibilidade?' },
   avaliacao: { kicker: 'SERVIÇO', title: 'AVALIAÇÃO FÍSICA', desc: 'Análise completa da sua composição corporal e do seu condicionamento para construir um plano 100% personalizado.', points: ['Anamnese', 'Avaliação física (dobras cutâneas)', 'Avaliação da força e resistência', 'Condicionamento aeróbico'], cta: 'AGENDAR AVALIAÇÃO', ctaNote: 'Agende sua avaliação física completa.', img: 'assets/poster-avaliacao.png', msg: 'Olá, Lucas! Quero agendar uma Avaliação Física.' },
   nutricional: { kicker: 'EM BREVE', title: 'ATENDIMENTO NUTRICIONAL ONLINE', desc: 'Em breve: a nutrição certa para potencializar seus resultados, integrada ao seu treino.', points: [], cta: 'QUERO SER AVISADO', ctaNote: 'Entre na lista de espera e seja avisado no lançamento.', img: 'assets/poster-nutricional.png', msg: 'Olá, Lucas! Quero entrar na lista de espera do Atendimento Nutricional Online.' },
   oferta: { kicker: 'OFERTA ESPECIAL', title: '6 MESES DE TREINO EXCLUSIVO', desc: '6 meses de treino exclusivo para você por apenas R$97,00. Treino individualizado, progressão planejada e acompanhamento direto.', points: ['6 meses de treino exclusivo', 'Progressão planejada', 'Acesso pelo aplicativo', 'Suporte direto com o Lucas'], cta: 'QUERO MEU ACESSO — R$97', ctaNote: 'Vagas limitadas por esse valor.', img: 'assets/oferta.png', msg: 'Olá, Lucas! Quero garantir a oferta de 6 meses de treino por R$97.' },
@@ -831,13 +839,22 @@ function setMenu(open){ var n = el('m-menu'); if (n) n.hidden = !open; }
 
 function renderDetailExtra(d){
   if (!d.features || !d.features.length) return '';
+  var isRows = !!(d.features[0] && d.features[0].sub);
   var tiles = d.features.map(function(f){
+    if (isRows) {
+      return '<div style="display:flex; align-items:center; gap:14px; padding:12px 14px; background:linear-gradient(135deg,var(--c-sa),var(--c-sb)); border:1px solid rgba(var(--c-primary-rgb),0.3); border-radius:12px;">'
+        + '<div style="width:46px; height:46px; flex:none; border-radius:50%; border:1.5px solid rgba(var(--c-primary-rgb),0.65); display:flex; align-items:center; justify-content:center;"><i data-lucide="' + f.icon + '" width="22" height="22" style="color:var(--c-primary);"></i></div>'
+        + '<div style="text-align:left;"><div style="font-family:\'Oswald\',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px;">' + escHtml(f.label) + '</div><div style="font-size:10.5px; color:#8A857B; letter-spacing:0.5px; margin-top:2px;">' + escHtml(f.sub) + '</div></div>'
+        + '</div>';
+    }
     return '<div style="flex:1 1 30%; min-width:96px; background:linear-gradient(135deg,var(--c-sa),var(--c-sb)); border:1px solid rgba(var(--c-primary-rgb),0.35); border-radius:12px; padding:14px 8px; text-align:center;">'
       + '<i data-lucide="' + f.icon + '" width="26" height="26" style="color:var(--c-primary);"></i>'
       + '<div style="font-family:\'Oswald\',sans-serif; font-weight:500; font-size:10px; letter-spacing:1px; color:#D8D2C7; margin-top:8px; line-height:1.35;">' + escHtml(f.label) + '</div>'
       + '</div>';
   }).join('');
-  var out = '<div style="display:flex; flex-wrap:wrap; gap:10px;">' + tiles + '</div>';
+  var out = '';
+  if (d.featuresTitle) out += '<div style="font-family:\'Oswald\',sans-serif; font-weight:600; letter-spacing:1.5px; font-size:13px; margin-bottom:14px;">' + escHtml(d.featuresTitle) + '</div>';
+  out += isRows ? '<div style="display:flex; flex-direction:column; gap:10px;">' + tiles + '</div>' : '<div style="display:flex; flex-wrap:wrap; gap:10px;">' + tiles + '</div>';
   if (d.headline1 || d.headline2) {
     out += '<div style="margin-top:20px; font-family:\'Oswald\',sans-serif; font-weight:700; font-size:22px; letter-spacing:0.5px; line-height:1.2;">' + escHtml(d.headline1 || '') + '<br><span style="color:var(--c-primary);">' + escHtml(d.headline2 || '') + '</span></div>';
   }
@@ -950,6 +967,7 @@ function navTo(target){
 
 function openWA(id){
   var d = DETAILS[id];
+  if (d && d.waLink) { window.open(d.waLink, '_blank'); return; }
   var msg = (d && d.msg) || DETAILS.contato.msg;
   window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
 }

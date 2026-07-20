@@ -80,11 +80,6 @@
   "default": "assets/poster-consultoria.png"
  },
  {
-  "key": "detalhe",
-  "label": "Modal — Personal Presencial",
-  "default": "assets/detalhe.webp"
- },
- {
   "key": "poster-avaliacao",
   "label": "Modal — Avaliação Física",
   "default": "assets/poster-avaliacao.png"
@@ -148,5 +143,10 @@
   "key": "resultado-9",
   "label": "Resultados — card 9",
   "default": "assets/resultado-9.jpg"
+ },
+ {
+  "key": "poster-personal",
+  "label": "Modal — Personal Presencial",
+  "default": "assets/poster-personal.png"
  }
 ]

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1280px; height:1280px; overflow:hidden; }
+  .stage{ position:relative; width:1280px; height:1280px; background:#0A0908; font-family:'Oswald',sans-serif; }
+  .gym{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:72% 40%; }
+  .fade-l{ position:absolute; inset:0; background:linear-gradient(100deg, rgba(10,9,8,0.97) 26%, rgba(10,9,8,0.82) 46%, rgba(10,9,8,0.25) 78%); }
+  .fade-tb{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,9,8,0.55) 0%, rgba(10,9,8,0) 18%, rgba(10,9,8,0) 72%, rgba(10,9,8,0.75) 100%); }
+
+  .conteudo{ position:absolute; left:305px; top:170px; width:660px; z-index:3; }
+  .kicker{ font-weight:400; font-size:34px; letter-spacing:18px; color:#EDEAE3; }
+  .titulo{ margin-top:6px; font-weight:700; font-size:104px; line-height:1; letter-spacing:2px;
+           background:linear-gradient(135deg,#F3DD8E,#C9A227 55%,#8C6D1A);
+           -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .frase{ margin-top:20px; font-weight:500; font-size:27px; letter-spacing:5px; color:#fff; line-height:1.5; }
+  .frase .ouro{ color:#C9A227; }
+
+  .linhas{ margin-top:40px; display:flex; flex-direction:column; gap:22px; }
+  .row{ display:flex; align-items:center; gap:22px; }
+  .row .ic{ width:58px; height:58px; flex:none; border-radius:50%; border:2px solid rgba(201,162,39,0.8);
+            background:rgba(10,9,8,0.55); display:flex; align-items:center; justify-content:center; }
+  .row .tt{ font-weight:600; font-size:24px; letter-spacing:2.5px; color:#fff; }
+  .row .st{ font-weight:300; font-size:17px; letter-spacing:2.5px; color:#B9B3A8; margin-top:4px; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <img class="gym" src="../assets/oferta-gym.png" alt="">
+  <div class="fade-l"></div>
+  <div class="fade-tb"></div>
+  <div class="conteudo">
+    <div class="kicker">P E R S O N A L</div>
+    <div class="titulo">PRESENCIAL</div>
+    <div class="frase">TREINO PERSONALIZADO.<br><span class="ouro">RESULTADOS REAIS.</span></div>
+    <div class="linhas">
+      <div class="row">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+        <div><div class="tt">TREINO PERSONALIZADO</div><div class="st">FEITO PARA O SEU OBJETIVO.</div></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+        <div><div class="tt">ACOMPANHAMENTO PROFISSIONAL</div><div class="st">SUPORTE E ORIENTAÇÃO EM CADA ETAPA.</div></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg></div>
+        <div><div class="tt">FOCO E ESTRATÉGIA</div><div class="st">PLANO INTELIGENTE PARA SUA MELHOR VERSÃO.</div></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.27"></polyline></svg></div>
+        <div><div class="tt">RESULTADOS CONSISTENTES</div><div class="st">DISCIPLINA, CONSTÂNCIA E EVOLUÇÃO.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

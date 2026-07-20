@@ -13,16 +13,11 @@
   "kicker": "ATENDIMENTO EXCLUSIVO",
   "title": "PERSONAL PRESENCIAL",
   "desc": "Treino personalizado ao vivo com acompanhamento direto e foco total em resultados. Supervisão profissional em cada exercício.",
-  "points": [
-   "Acompanhamento ao vivo, presencial",
-   "Correção de execução em tempo real",
-   "Periodização personalizada",
-   "Foco total na sua evolução"
-  ],
+  "points": [],
   "cta": "FALAR NO WHATSAPP",
   "ctaNote": "Atendimento exclusivo e limitado. Fale comigo para verificar disponibilidade.",
   "msg": "Olá, Lucas! Tenho interesse no Personal Presencial. Ainda há disponibilidade?",
-  "img": "assets/detalhe.webp"
+  "img": "assets/poster-personal.png"
  },
  "avaliacao": {
   "kicker": "SERVIÇO",
