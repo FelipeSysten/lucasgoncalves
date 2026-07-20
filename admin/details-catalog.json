@@ -62,17 +62,12 @@
  "fitslim": {
   "kicker": "EMAGRECIMENTO",
   "title": "FIT SLIM",
-  "desc": "Protocolo completo para queimar gordura, acelerar o metabolismo e definir o corpo.",
-  "points": [
-   "Treino focado em emagrecimento",
-   "Estratégias para acelerar o metabolismo",
-   "Progressão planejada",
-   "Acompanhamento pelo app"
-  ],
+  "desc": "Método completo para queima de gordura, aumentar o gasto calórico e conquistar um corpo mais definido.",
+  "points": [],
   "cta": "QUERO O FIT SLIM",
-  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16 — desbloqueie a sua melhor versão.",
   "msg": "Olá, Lucas! Quero começar o programa FIT SLIM.",
-  "img": "assets/prog-fitslim.png"
+  "img": "assets/poster-fitslim.png"
  },
  "gluteoprotocol": {
   "kicker": "CRESCIMENTO E DEFINIÇÃO",

@@ -569,7 +569,7 @@
             <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--c-sg),var(--c-sh)); border:1px solid rgba(var(--c-primary-rgb),0.45); display:flex; align-items:center; justify-content:center; margin-bottom:120px;"><i data-lucide="flame" width="24" height="24" style="color:var(--c-primary);"></i></div>
             <h3 style="margin:0; font-family:'Oswald',sans-serif; font-weight:600; font-size:26px;"><span data-text="prog-fitslim-nome">FIT SLIM</span></h3>
             <div style="font-family:'Oswald',sans-serif; font-weight:500; font-size:11px; letter-spacing:2px; color:var(--c-primary); margin:4px 0 12px;"><span data-text="prog-fitslim-cat">EMAGRECIMENTO</span></div>
-            <p style="margin:0 0 14px; font-size:13.5px; color:#C3BDB2; line-height:1.55;"><span data-text="d-prog-fitslim-desc">Protocolo completo para queimar gordura, acelerar o metabolismo e definir o corpo.</span></p>
+            <p style="margin:0 0 14px; font-size:13.5px; color:#C3BDB2; line-height:1.55;"><span data-text="d-prog-fitslim-desc">Método completo para queima de gordura, aumentar o gasto calórico e conquistar um corpo mais definido.</span></p>
             <span style="font-size:13px; color:var(--c-primary); display:inline-flex; align-items:center; gap:6px;">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
           </div>
         </div>
@@ -781,7 +781,7 @@
       <div id="d-modal-scroll" style="position:relative; width:100%; max-width:880px; max-height:88vh; overflow-y:auto; background:var(--c-se); border:1px solid rgba(var(--c-primary-rgb),0.3); border-radius:20px; animation:lgPop 0.28s cubic-bezier(0.4,0,0.2,1); box-shadow:0 30px 80px rgba(0,0,0,0.6);">
         <button data-modal="close" aria-label="Fechar" style="position:absolute; top:18px; right:18px; z-index:5; width:42px; height:42px; border-radius:50%; background:rgba(var(--c-bg-rgb),0.7); border:1px solid rgba(var(--c-primary-rgb),0.4); color:var(--c-primary); cursor:pointer; display:flex; align-items:center; justify-content:center;"><i data-lucide="x" width="22" height="22"></i></button>
         <div style="display:grid; grid-template-columns:1fr 1fr;">
-          <img id="d-detail-img" src="assets/detalhe.webp" alt="" style="width:100%; height:100%; min-height:420px; object-fit:cover; object-position:50% 20%; display:block;">
+          <img id="d-detail-img" src="assets/detalhe.webp" alt="" style="width:100%; aspect-ratio:1/1; height:auto; align-self:start; object-fit:cover; display:block;">
           <div style="padding:44px 40px;">
             <div id="d-detail-kicker" style="font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:3px; font-size:11px; color:var(--c-primary); margin-bottom:10px;"></div>
             <h2 id="d-detail-title" style="margin:0 0 16px; font-family:'Oswald',sans-serif; font-weight:700; font-size:34px; line-height:1.04;"></h2>
@@ -845,7 +845,18 @@ var DETAILS = {
   avaliacao: { kicker: 'SERVIÇO', title: 'AVALIAÇÃO FÍSICA', desc: 'Análise completa da sua composição corporal e do seu condicionamento para construir um plano 100% personalizado.', points: ['Anamnese', 'Avaliação física (dobras cutâneas)', 'Avaliação da força e resistência', 'Condicionamento aeróbico'], cta: 'AGENDAR AVALIAÇÃO', ctaNote: 'Agende sua avaliação física completa.', img: 'assets/poster-avaliacao.png', msg: 'Olá, Lucas! Quero agendar uma Avaliação Física.' },
   nutricional: { kicker: 'EM BREVE', title: 'ATENDIMENTO NUTRICIONAL ONLINE', desc: 'Em breve: a nutrição certa para potencializar seus resultados, integrada ao seu treino.', points: [], cta: 'QUERO SER AVISADO', ctaNote: 'Entre na lista de espera e seja avisado no lançamento.', img: 'assets/poster-nutricional.png', msg: 'Olá, Lucas! Quero entrar na lista de espera do Atendimento Nutricional Online.' },
   oferta: { kicker: 'OFERTA ESPECIAL', title: '6 MESES DE TREINO EXCLUSIVO', desc: 'O plano feito para você: hipertrofia, emagrecimento, condicionamento, força — escolha o seu desafio. 6 meses de treino exclusivo por R$ 96 à vista ou 6x de R$ 16.', points: ['6 meses de treino exclusivo', 'Progressão planejada', 'Métodos avançados', 'Suporte direto com o Lucas'], cta: 'ESCOLHER MEU PROGRAMA', ctaGoto: 'programas', ctaNote: 'R$ 96 à vista ou 6x de R$ 16 — vagas limitadas.', img: 'assets/oferta-texto.png', msg: 'Olá, Lucas! Quero garantir os 6 meses de treino por R$ 96.' },
-  fitslim: { kicker: 'EMAGRECIMENTO', title: 'FIT SLIM', desc: 'Protocolo completo para queimar gordura, acelerar o metabolismo e definir o corpo.', points: ['Treino focado em emagrecimento', 'Estratégias para acelerar o metabolismo', 'Progressão planejada', 'Acompanhamento pelo app'], cta: 'QUERO O FIT SLIM', ctaNote: 'R$ 96 à vista ou 6x de R$ 16.', img: 'assets/prog-fitslim.png', msg: 'Olá, Lucas! Quero começar o programa FIT SLIM.' },
+  fitslim: { kicker: 'EMAGRECIMENTO', title: 'FIT SLIM', desc: 'Método completo para queima de gordura, aumentar o gasto calórico e conquistar um corpo mais definido.', points: [],
+    featuresTitle: 'O QUE ESTÁ INCLUSO',
+    features: [
+      { icon: 'flame', label: 'PROTOCOLO COMPLETO', sub: 'Feito para queima de gordura.' },
+      { icon: 'dumbbell', label: 'TREINOS ESTRATÉGICOS', sub: 'Volume e intensidade na medida certa.' },
+      { icon: 'utensils', label: 'ORIENTAÇÃO PARA DIETA', sub: 'Direção alimentar prática no dia a dia.' },
+      { icon: 'target', label: 'MÉTODOS AVANÇADOS', sub: 'Técnicas que aceleram seus resultados.' },
+      { icon: 'calendar', label: 'PERIODIZAÇÃO COMPLETA', sub: 'Evolução planejada semana a semana.' },
+      { icon: 'trending-up', label: 'ACOMPANHAMENTO E PROGRESSÃO', sub: 'Ajustes conforme você evolui.' },
+      { icon: 'calendar-check', label: '6 MESES DE TREINO', sub: 'O programa completo da sua transformação.' }
+    ],
+    cta: 'QUERO O FIT SLIM', ctaNote: 'R$ 96 à vista ou 6x de R$ 16 — desbloqueie a sua melhor versão.', img: 'assets/poster-fitslim.png', msg: 'Olá, Lucas! Quero começar o programa FIT SLIM.' },
   gluteoprotocol: { kicker: 'CRESCIMENTO E DEFINIÇÃO', title: 'GLUTE MAX', desc: 'Treinos e estratégias específicas para desenvolver, levantar e definir seus glúteos.', points: ['Treino específico para glúteos', 'Técnicas de ativação e crescimento', 'Progressão semanal', 'Métodos avançados'], cta: 'QUERO O GLUTE MAX', ctaNote: 'R$ 96 à vista ou 6x de R$ 16.', img: 'assets/prog-gluteo.png', msg: 'Olá, Lucas! Quero começar o GLUTE MAX.' },
   gorilla: { kicker: 'GANHO DE FORÇA', title: 'GORILLA STRENGTH', desc: 'Programa focado em força máxima, performance e evolução constante.', points: ['Periodização de força', 'Foco em performance', 'Progressão de cargas planejada', 'Acompanhamento pelo app'], cta: 'QUERO O GORILLA', ctaNote: 'R$ 96 à vista ou 6x de R$ 16.', img: 'assets/prog-gorilla.png', msg: 'Olá, Lucas! Quero começar o GORILLA STRENGTH.' },
   pump100: { kicker: 'HIPERTROFIA', title: 'PUMP 100', desc: 'Métodos avançados de treino para maximizar o ganho de massa muscular.', points: ['Métodos avançados de hipertrofia', 'Volume e intensidade otimizados', 'Progressão planejada', 'Acompanhamento pelo app'], cta: 'QUERO O PUMP 100', ctaNote: 'R$ 96 à vista ou 6x de R$ 16.', img: 'assets/prog-pump100.png', msg: 'Olá, Lucas! Quero começar o PUMP 100.' },

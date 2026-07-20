@@ -143,5 +143,10 @@
   "key": "poster-personal",
   "label": "Modal — Personal Presencial",
   "default": "assets/poster-personal.png"
+ },
+ {
+  "key": "poster-fitslim",
+  "label": "Modal — Fit Slim",
+  "default": "assets/poster-fitslim.png"
  }
 ]
