@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1280px; height:1280px; overflow:hidden; }
+  .stage{ position:relative; width:1280px; height:1280px; background:#0A0908; font-family:'Oswald',sans-serif; overflow:hidden; }
+  .foto{ position:absolute; right:-120px; top:0; width:760px; height:1280px; object-fit:cover; object-position:50% 20%; opacity:0.5; }
+  .fade{ position:absolute; inset:0; background:linear-gradient(97deg, #0A0908 34%, rgba(10,9,8,0.86) 52%, rgba(10,9,8,0.35) 82%); }
+  .fade2{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,9,8,0.6) 0%, rgba(10,9,8,0) 16%, rgba(10,9,8,0) 70%, rgba(10,9,8,0.85) 100%); }
+  .gmark{ position:absolute; left:-140px; bottom:-100px; width:700px; opacity:0.06; }
+
+  .conteudo{ position:absolute; left:305px; top:150px; width:400px; z-index:3; }
+  .kicker{ font-weight:400; font-size:32px; letter-spacing:14px; color:#EDEAE3; white-space:nowrap; }
+  .titulo{ margin-top:4px; font-weight:700; font-size:110px; line-height:1; letter-spacing:2px;
+           background:linear-gradient(135deg,#F3DD8E,#C9A227 55%,#8C6D1A);
+           -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .frase{ margin-top:18px; font-weight:500; font-size:26px; letter-spacing:4px; color:#fff; line-height:1.5; }
+  .frase .ouro{ color:#C9A227; }
+
+  .tiles{ margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:14px; width:400px; }
+  .tile{ background:rgba(10,9,8,0.72); border:1.5px solid rgba(201,162,39,0.45); border-radius:14px; padding:16px 14px; }
+  .tile .tt{ display:flex; align-items:center; gap:10px; font-weight:600; font-size:17px; letter-spacing:1px; color:#fff; }
+  .tile .st{ font-weight:300; font-size:13px; letter-spacing:1px; color:#B9B3A8; margin-top:6px; line-height:1.4; }
+
+  .selo{ margin-top:24px; width:400px; display:flex; align-items:center; gap:14px; padding:16px 20px;
+         border:2px solid rgba(201,162,39,0.6); border-radius:12px; background:rgba(201,162,39,0.08); }
+  .selo .ic{ width:44px; height:44px; flex:none; border-radius:10px; background:linear-gradient(135deg,#C9A227,#9A7B1B);
+             display:flex; align-items:center; justify-content:center; }
+  .selo .tx{ font-weight:500; font-size:18px; letter-spacing:1.5px; color:#fff; line-height:1.4; }
+  .selo .tx b{ color:#C9A227; font-weight:600; }
+
+  /* ───────── celular com dashboard ───────── */
+  .phone{ position:absolute; left:730px; top:190px; width:290px; height:600px; z-index:3;
+          background:#050505; border:3px solid #2a2620; border-radius:38px;
+          box-shadow:0 30px 70px rgba(0,0,0,0.8), 0 0 0 2px rgba(201,162,39,0.25);
+          padding:18px 16px; }
+  .notch{ width:90px; height:16px; background:#0A0908; border-radius:0 0 12px 12px; margin:-18px auto 10px; }
+  .ph-title{ font-weight:600; font-size:13px; letter-spacing:2.5px; color:#C9A227; text-align:center; }
+  .gauge{ position:relative; width:150px; height:150px; margin:14px auto 6px; }
+  .gauge .pct{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .gauge .pct b{ font-weight:700; font-size:34px; color:#fff; }
+  .gauge .pct span{ font-weight:400; font-size:9px; letter-spacing:1.5px; color:#B9B3A8; }
+  .metric{ display:flex; justify-content:space-between; align-items:center; padding:9px 4px; border-bottom:1px solid rgba(201,162,39,0.18); }
+  .metric .k{ font-weight:400; font-size:11px; letter-spacing:1.5px; color:#B9B3A8; }
+  .metric .v{ font-weight:600; font-size:14px; color:#C9A227; }
+  .chart{ margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <img class="foto" src="../assets/svc-avaliacao.png" alt="">
+  <div class="fade"></div>
+  <div class="fade2"></div>
+  <img class="gmark" src="../assets/g-mark.png" alt="">
+
+  <div class="conteudo">
+    <div class="kicker">A V A L I A Ç Ã O</div>
+    <div class="titulo">FÍSICA</div>
+    <div class="frase">DADOS PRECISOS.<br><span class="ouro">RESULTADOS REAIS.</span></div>
+
+    <div class="tiles">
+      <div class="tile">
+        <div class="tt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg> ANAMNESE</div>
+        <div class="st">HISTÓRICO E OBJETIVOS.</div>
+      </div>
+      <div class="tile">
+        <div class="tt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m7.5 10.5 2 2"></path><path d="m10.5 7.5 2 2"></path><path d="m13.5 4.5 2 2"></path><path d="m4.5 13.5 2 2"></path></svg> DOBRAS</div>
+        <div class="st">COMPOSIÇÃO CORPORAL.</div>
+      </div>
+      <div class="tile">
+        <div class="tt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 4-4"></path><path d="m2 6 4-4"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path></svg> FORÇA</div>
+        <div class="st">FORÇA E RESISTÊNCIA.</div>
+      </div>
+      <div class="tile">
+        <div class="tt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg> AERÓBICO</div>
+        <div class="st">CONDICIONAMENTO.</div>
+      </div>
+    </div>
+
+    <div class="selo">
+      <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A0908" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg></div>
+      <div class="tx">CONHEÇA SEUS NÚMEROS E<br><b>ACOMPANHE SUA EVOLUÇÃO.</b></div>
+    </div>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="ph-title">MINHA EVOLUÇÃO</div>
+    <div class="gauge">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <circle cx="75" cy="75" r="64" fill="none" stroke="#241f14" stroke-width="12"/>
+        <circle cx="75" cy="75" r="64" fill="none" stroke="#C9A227" stroke-width="12" stroke-linecap="round"
+                stroke-dasharray="402" stroke-dashoffset="88" transform="rotate(-90 75 75)"/>
+      </svg>
+      <div class="pct"><b>82%</b><span>DO OBJETIVO</span></div>
+    </div>
+    <div class="metric"><span class="k">% GORDURA</span><span class="v">14,2%</span></div>
+    <div class="metric"><span class="k">MASSA MAGRA</span><span class="v">68,4 kg</span></div>
+    <div class="metric"><span class="k">PESO ATUAL</span><span class="v">82,1 kg</span></div>
+    <div class="chart">
+      <svg width="258" height="120" viewBox="0 0 258 120">
+        <defs>
+          <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C9A227" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#C9A227" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polyline fill="none" stroke="#3a352b" stroke-width="1" points="0,100 258,100"/>
+        <polygon fill="url(#area)" points="0,86 43,78 86,82 129,60 172,52 215,38 258,26 258,120 0,120"/>
+        <polyline fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                  points="0,86 43,78 86,82 129,60 172,52 215,38 258,26"/>
+        <circle cx="258" cy="26" r="5" fill="#C9A227"/>
+      </svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>
