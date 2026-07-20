@@ -72,17 +72,12 @@
  "gluteoprotocol": {
   "kicker": "CRESCIMENTO E DEFINIÇÃO",
   "title": "GLUTE MAX",
-  "desc": "Treinos e estratégias específicas para desenvolver, levantar e definir seus glúteos.",
-  "points": [
-   "Treino específico para glúteos",
-   "Técnicas de ativação e crescimento",
-   "Progressão semanal",
-   "Métodos avançados"
-  ],
+  "desc": "Treinos estratégicos e progressivos, desenvolvidos para ativar, desenvolver e potencializar seus resultados.",
+  "points": [],
   "cta": "QUERO O GLUTE MAX",
-  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16 — comece agora sua transformação.",
   "msg": "Olá, Lucas! Quero começar o GLUTE MAX.",
-  "img": "assets/prog-gluteo.png"
+  "img": "assets/poster-glutemax.png"
  },
  "gorilla": {
   "kicker": "GANHO DE FORÇA",

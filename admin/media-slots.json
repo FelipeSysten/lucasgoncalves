@@ -148,5 +148,10 @@
   "key": "poster-fitslim",
   "label": "Modal — Fit Slim",
   "default": "assets/poster-fitslim.png"
+ },
+ {
+  "key": "poster-glutemax",
+  "label": "Modal — Glute Max",
+  "default": "assets/poster-glutemax.png"
  }
 ]
