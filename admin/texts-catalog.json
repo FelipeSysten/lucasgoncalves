@@ -201,13 +201,13 @@
   "key": "d-hero-oferta-btn",
   "label": "Hero — botão da oferta (computador)",
   "group": "Oferta R$97",
-  "default": "OFERTA R$97"
+  "default": "OFERTA R$96"
  },
  {
   "key": "d-oferta-desc",
   "label": "Oferta — descrição (computador)",
   "group": "Oferta R$97",
-  "default": "Para você. Treino individualizado, progressão planejada e acompanhamento direto por 6 meses — tudo pelo aplicativo."
+  "default": "O plano feito para você: hipertrofia, emagrecimento, condicionamento, força — escolha o seu desafio…"
  },
  {
   "key": "d-oferta-kicker",
@@ -219,7 +219,7 @@
   "key": "m-oferta-desc",
   "label": "Oferta — descrição (celular)",
   "group": "Oferta R$97",
-  "default": "Para você. Treino individualizado, progressão planejada e acompanhamento direto por 6 meses."
+  "default": "O plano feito para você: hipertrofia, emagrecimento, condicionamento, força — escolha o seu desafio…"
  },
  {
   "key": "oferta-apenas",
@@ -231,7 +231,7 @@
   "key": "oferta-cta",
   "label": "Oferta — botão principal",
   "group": "Oferta R$97",
-  "default": "QUERO MEU ACESSO"
+  "default": "ESCOLHER MEU PROGRAMA"
  },
  {
   "key": "oferta-cta-d",
@@ -243,7 +243,7 @@
   "key": "oferta-preco",
   "label": "Oferta — preço",
   "group": "Oferta R$97",
-  "default": "R$97"
+  "default": "R$96"
  },
  {
   "key": "oferta-titulo",
@@ -294,6 +294,24 @@
   "default": "ONLINE"
  },
  {
+  "key": "prog-hybridpro-nome",
+  "label": "Programa HYBRID PRO — nome",
+  "group": "Programas",
+  "default": "HYBRID PRO"
+ },
+ {
+  "key": "prog-hybridpro-cat",
+  "label": "Programa HYBRID PRO — categoria",
+  "group": "Programas",
+  "default": "FORÇA + CONDICIONAMENTO"
+ },
+ {
+  "key": "d-prog-hybridpro-desc",
+  "label": "Programa — descrição do card (computador)",
+  "group": "Programas",
+  "default": "Força e condicionamento no mesmo programa, para performance completa."
+ },
+ {
   "key": "prog-consultoriapremium-nome",
   "label": "Programa CONSULTORIA PREMIUM — nome",
   "group": "Programas",
@@ -319,9 +337,9 @@
  },
  {
   "key": "prog-gluteoprotocol-nome",
-  "label": "Programa GLÚTEO PROTOCOL — nome",
+  "label": "Programa GLUTE MAX — nome",
   "group": "Programas",
-  "default": "GLÚTEO PROTOCOL"
+  "default": "GLUTE MAX"
  },
  {
   "key": "prog-gorilla-cat",

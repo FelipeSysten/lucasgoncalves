@@ -47,17 +47,17 @@
  "oferta": {
   "kicker": "OFERTA ESPECIAL",
   "title": "6 MESES DE TREINO EXCLUSIVO",
-  "desc": "6 meses de treino exclusivo para você por apenas R$97,00. Treino individualizado, progressão planejada e acompanhamento direto.",
+  "desc": "O plano feito para você: hipertrofia, emagrecimento, condicionamento, força — escolha o seu desafio. 6 meses de treino exclusivo por R$ 96 à vista ou 6x de R$ 16.",
   "points": [
    "6 meses de treino exclusivo",
    "Progressão planejada",
-   "Acesso pelo aplicativo",
+   "Métodos avançados",
    "Suporte direto com o Lucas"
   ],
-  "cta": "QUERO MEU ACESSO — R$97",
-  "ctaNote": "Vagas limitadas por esse valor.",
-  "msg": "Olá, Lucas! Quero garantir a oferta de 6 meses de treino por R$97.",
-  "img": "assets/oferta.png"
+  "cta": "ESCOLHER MEU PROGRAMA",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16 — vagas limitadas.",
+  "msg": "Olá, Lucas! Quero garantir os 6 meses de treino por R$ 96.",
+  "img": "assets/oferta-texto.png"
  },
  "fitslim": {
   "kicker": "EMAGRECIMENTO",
@@ -70,23 +70,23 @@
    "Acompanhamento pelo app"
   ],
   "cta": "QUERO O FIT SLIM",
-  "ctaNote": "Comece sua transformação agora.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
   "msg": "Olá, Lucas! Quero começar o programa FIT SLIM.",
   "img": "assets/prog-fitslim.png"
  },
  "gluteoprotocol": {
   "kicker": "CRESCIMENTO E DEFINIÇÃO",
-  "title": "GLÚTEO PROTOCOL",
+  "title": "GLUTE MAX",
   "desc": "Treinos e estratégias específicas para desenvolver, levantar e definir seus glúteos.",
   "points": [
    "Treino específico para glúteos",
    "Técnicas de ativação e crescimento",
    "Progressão semanal",
-   "Acompanhamento pelo app"
+   "Métodos avançados"
   ],
-  "cta": "QUERO O PROTOCOL",
-  "ctaNote": "Construa o resultado que você procura.",
-  "msg": "Olá, Lucas! Quero começar o GLÚTEO PROTOCOL.",
+  "cta": "QUERO O GLUTE MAX",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
+  "msg": "Olá, Lucas! Quero começar o GLUTE MAX.",
   "img": "assets/prog-gluteo.png"
  },
  "gorilla": {
@@ -100,7 +100,7 @@
    "Acompanhamento pelo app"
   ],
   "cta": "QUERO O GORILLA",
-  "ctaNote": "Evolua sua força de forma constante.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
   "msg": "Olá, Lucas! Quero começar o GORILLA STRENGTH.",
   "img": "assets/prog-gorilla.png"
  },
@@ -115,9 +115,24 @@
    "Acompanhamento pelo app"
   ],
   "cta": "QUERO O PUMP 100",
-  "ctaNote": "Maximize seu ganho de massa.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
   "msg": "Olá, Lucas! Quero começar o PUMP 100.",
   "img": "assets/prog-pump100.png"
+ },
+ "hybridpro": {
+  "kicker": "FORÇA + CONDICIONAMENTO",
+  "title": "HYBRID PRO",
+  "desc": "Força e condicionamento no mesmo programa, para performance completa.",
+  "points": [
+   "Força e aeróbico integrados",
+   "Progressão planejada",
+   "Métodos avançados",
+   "Suporte direto com o Lucas"
+  ],
+  "cta": "QUERO O HYBRID PRO",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
+  "msg": "Olá, Lucas! Quero começar o HYBRID PRO.",
+  "img": "assets/oferta-gym.png"
  },
  "consultoriapremium": {
   "kicker": "ONLINE",

@@ -90,11 +90,6 @@
   "default": "assets/poster-nutricional.png"
  },
  {
-  "key": "oferta",
-  "label": "Modal — Oferta R$97",
-  "default": "assets/oferta.png"
- },
- {
   "key": "oferta-gym",
   "label": "Modal — Contato",
   "default": "assets/oferta-gym.png"

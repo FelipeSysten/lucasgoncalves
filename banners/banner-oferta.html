@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:800px; height:1200px; overflow:hidden; }
+  .stage{ position:relative; width:800px; height:1200px; background:#0A0908; font-family:'Outfit',sans-serif; overflow:hidden; }
+  .gym{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:70% 30%; opacity:0.55; }
+  .fade{ position:absolute; inset:0; background:linear-gradient(115deg, rgba(10,9,8,0.92) 30%, rgba(10,9,8,0.55) 60%, rgba(10,9,8,0.25) 100%); }
+  .fade2{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,9,8,0.5) 0%, rgba(10,9,8,0) 22%, rgba(10,9,8,0) 72%, rgba(10,9,8,0.7) 100%); }
+  .texto{ position:absolute; left:64px; top:355px; z-index:3; }
+  .t1{ font-weight:700; font-size:92px; line-height:1.12; color:#fff; letter-spacing:0.5px; }
+  .t2{ margin-top:14px; font-weight:600; font-size:44px; color:#C9A227; letter-spacing:0.5px; }
+  .preco{ margin-top:36px; display:flex; align-items:center; gap:22px; }
+  .preco .por{ font-weight:400; font-size:40px; color:#EDEAE3; }
+  .preco .val{ font-weight:800; font-size:118px; line-height:1; color:#C9A227; }
+  .preco .val small{ font-size:70px; font-weight:800; }
+  .parc{ margin-top:14px; font-weight:400; font-size:30px; color:#B9B3A8; }
+  .parc b{ color:#C9A227; font-weight:600; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <img class="gym" src="../assets/oferta-gym.png" alt="">
+  <div class="fade"></div>
+  <div class="fade2"></div>
+  <div class="texto">
+    <div class="t1">6 MESES<br>DE TREINO</div>
+    <div class="t2">EXCLUSIVO PARA VOCÊ</div>
+    <div class="preco"><span class="por">POR</span><span class="val">96<small>,00R$</small></span></div>
+    <div class="parc">ou <b>6x de R$ 16</b> no cartão</div>
+  </div>
+</div>
+</body>
+</html>
