@@ -153,5 +153,25 @@
   "key": "poster-glutemax",
   "label": "Modal — Glute Max",
   "default": "assets/poster-glutemax.png"
+ },
+ {
+  "key": "poster-gorilla",
+  "label": "Modal — Gorilla Strength",
+  "default": "assets/poster-gorilla.png"
+ },
+ {
+  "key": "poster-pump100",
+  "label": "Modal — Pump 100",
+  "default": "assets/poster-pump100.png"
+ },
+ {
+  "key": "poster-hybridpro",
+  "label": "Modal — Hybrid Pro",
+  "default": "assets/poster-hybridpro.png"
+ },
+ {
+  "key": "prog-hybridpro-photo",
+  "label": "Programa — Hybrid Pro (foto base)",
+  "default": "assets/prog-hybridpro-photo.png"
  }
 ]

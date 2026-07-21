@@ -82,47 +82,32 @@
  "gorilla": {
   "kicker": "GANHO DE FORÇA",
   "title": "GORILLA STRENGTH",
-  "desc": "Programa focado em força máxima, performance e evolução constante.",
-  "points": [
-   "Periodização de força",
-   "Foco em performance",
-   "Progressão de cargas planejada",
-   "Acompanhamento pelo app"
-  ],
+  "desc": "O protocolo definitivo para quem quer mais força, performance e resultados reais nos treinos.",
+  "points": [],
   "cta": "QUERO O GORILLA",
-  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16 — comece agora sua evolução.",
   "msg": "Olá, Lucas! Quero começar o GORILLA STRENGTH.",
-  "img": "assets/prog-gorilla.png"
+  "img": "assets/poster-gorilla.png"
  },
  "pump100": {
   "kicker": "HIPERTROFIA",
   "title": "PUMP 100",
-  "desc": "Métodos avançados de treino para maximizar o ganho de massa muscular.",
-  "points": [
-   "Métodos avançados de hipertrofia",
-   "Volume e intensidade otimizados",
-   "Progressão planejada",
-   "Acompanhamento pelo app"
-  ],
+  "desc": "Treinos metabólicos e de alto volume desenvolvidos para gerar o máximo de estímulo muscular e acelerar seus resultados.",
+  "points": [],
   "cta": "QUERO O PUMP 100",
-  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16 — comece agora sua transformação.",
   "msg": "Olá, Lucas! Quero começar o PUMP 100.",
-  "img": "assets/prog-pump100.png"
+  "img": "assets/poster-pump100.png"
  },
  "hybridpro": {
   "kicker": "FORÇA + CONDICIONAMENTO",
   "title": "HYBRID PRO",
-  "desc": "Força e condicionamento no mesmo programa, para performance completa.",
-  "points": [
-   "Força e aeróbico integrados",
-   "Progressão planejada",
-   "Métodos avançados",
-   "Suporte direto com o Lucas"
-  ],
+  "desc": "O protocolo completo que combina treinos de força e cardio estratégico para aumentar sua performance, queimar gordura e construir um físico forte e definido.",
+  "points": [],
   "cta": "QUERO O HYBRID PRO",
-  "ctaNote": "R$ 96 à vista ou 6x de R$ 16.",
+  "ctaNote": "R$ 96 à vista ou 6x de R$ 16 — comece agora sua transformação.",
   "msg": "Olá, Lucas! Quero começar o HYBRID PRO.",
-  "img": "assets/oferta-gym.png"
+  "img": "assets/poster-hybridpro.png"
  },
  "consultoriapremium": {
   "kicker": "ONLINE",
@@ -132,7 +117,7 @@
    "Suporte diário com o Lucas",
    "Ajustes estratégicos contínuos",
    "Plano de treino e dieta",
-   "Acompanhamento premium pelo app"
+   "Acompanhamento premium pelo aplicativo"
   ],
   "cta": "FALAR NO WHATSAPP",
   "ctaNote": "Vagas limitadas. Fale comigo para verificar disponibilidade.",
