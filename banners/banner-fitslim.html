@@ -9,7 +9,7 @@
   *{ margin:0; padding:0; box-sizing:border-box; }
   html,body{ width:1280px; height:1280px; overflow:hidden; }
   .stage{ position:relative; width:1280px; height:1280px; background:#0A0908; font-family:'Oswald',sans-serif; overflow:hidden; }
-  .foto{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 18%; }
+  .foto{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 10%; }
   .fade-b{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,9,8,0.55) 0%, rgba(10,9,8,0.05) 20%, rgba(10,9,8,0) 60%, rgba(10,9,8,0.45) 88%, rgba(10,9,8,0.75) 100%); }
   .fade-x{ position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,9,8,0.55) 0%, rgba(10,9,8,0) 18%, rgba(10,9,8,0) 82%, rgba(10,9,8,0.55) 100%); }
 
@@ -28,13 +28,17 @@
 
   .sublines{ position:absolute; left:112px; top:262px; z-index:3; display:flex; flex-direction:column; gap:9px; }
   .sublines div{ font-family:'Outfit',sans-serif; font-weight:500; font-size:16px; letter-spacing:1.5px; color:#8A857B; }
+
+  .clean{ position:absolute; left:0; top:150px; width:360px; height:300px; z-index:2;
+          background:linear-gradient(90deg, rgba(10,9,8,0.96) 0%, rgba(10,9,8,0.96) 55%, rgba(10,9,8,0) 100%); }
 </style>
 </head>
 <body>
 <div class="stage">
-  <img class="foto" src="../assets/fitslim-transform.png" alt="">
+  <img class="foto" src="../assets/fitslim-transform-v2.png" alt="">
   <div class="fade-b"></div>
   <div class="fade-x"></div>
+  <div class="clean"></div>
 
   <div class="kicker">EMAGRECIMENTO <b>•</b> DEFINIÇÃO <b>•</b> SAÚDE <b>•</b> PERFORMANCE</div>
 
