@@ -444,38 +444,26 @@
   "default": "Evolução constante com análises e ajustes."
  },
  {
-  "key": "feat-4",
+  "key": "feat-5",
   "label": "Recurso 4 — título",
   "group": "Vitrine de recursos",
-  "default": "SUPORTE DIRETO"
- },
- {
-  "key": "feat-4-desc",
-  "label": "Recurso 4 — descrição (computador)",
-  "group": "Vitrine de recursos",
-  "default": "Fale diretamente comigo sempre que precisar."
- },
- {
-  "key": "feat-5",
-  "label": "Recurso 5 — título",
-  "group": "Vitrine de recursos",
-  "default": "APLICATIVO EXCLUSIVO"
+  "default": "MÉTODOS AVANÇADOS"
  },
  {
   "key": "feat-5-desc",
-  "label": "Recurso 5 — descrição (computador)",
+  "label": "Recurso 4 — descrição (computador)",
   "group": "Vitrine de recursos",
-  "default": "Acompanhe treinos, dieta e evolução no app."
+  "default": "Técnicas avançadas para acelerar seus resultados."
  },
  {
   "key": "feat-6",
-  "label": "Recurso 6 — título",
+  "label": "Recurso 5 — título",
   "group": "Vitrine de recursos",
   "default": "RESULTADOS REAIS"
  },
  {
   "key": "feat-6-desc",
-  "label": "Recurso 6 — descrição (computador)",
+  "label": "Recurso 5 — descrição (computador)",
   "group": "Vitrine de recursos",
   "default": "Método comprovado que gera transformação."
  },
