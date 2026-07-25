@@ -398,7 +398,7 @@
   <div id="m-detail" hidden>
     <div style="position:fixed; inset:0; left:50%; transform:translateX(-50%); width:100%; max-width:440px; z-index:55; background:var(--c-bg); overflow-y:auto; animation:lgFade 0.25s ease;">
       <header style="position:sticky; top:0; z-index:5; display:flex; align-items:center; justify-content:space-between; padding:14px 18px; background:var(--c-bg); border-bottom:1px solid rgba(var(--c-primary-rgb),0.18);">
-        <button data-screen="home" style="background:none; border:none; color:var(--c-primary); cursor:pointer; display:flex; align-items:center; gap:8px; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:13px;"><i data-lucide="arrow-left" width="20" height="20"></i> VOLTAR</button>
+        <button id="m-detail-back" data-screen="home" style="background:none; border:none; color:var(--c-primary); cursor:pointer; display:flex; align-items:center; gap:8px; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1.5px; font-size:13px;"><i data-lucide="arrow-left" width="20" height="20"></i> VOLTAR</button>
         <button data-menu="open" aria-label="Abrir menu" style="background:none; border:none; color:var(--c-primary); cursor:pointer; display:flex;"><i data-lucide="menu" width="24" height="24"></i></button>
       </header>
       <img id="m-detail-img" src="assets/detalhe.webp" alt="" style="width:100%; height:240px; object-fit:cover; object-position:50% 20%; display:block;">
@@ -1032,6 +1032,9 @@ function showScreen(name){
 
 function openDetail(id){
   if (!fillDetail(id)) return;
+  var cameFromProgramas = !el('m-programas').hidden;
+  var backBtn = el('m-detail-back');
+  if (backBtn) backBtn.setAttribute('data-screen', cameFromProgramas ? 'programas' : 'home');
   setMenu(false);
   el('m-programas').hidden = true;
   el('m-detail').hidden = false;
