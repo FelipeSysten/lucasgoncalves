@@ -147,16 +147,7 @@
       </div>
     </div>
 
-    <!-- Card: 6 Meses (protocolos) -->
-    <div data-screen="programas" style="display:flex; align-items:stretch; gap:0; background:linear-gradient(135deg,var(--c-sa),var(--c-sb)); border:1.5px solid rgba(var(--c-primary-rgb),0.45); border-radius:14px; overflow:hidden; margin-bottom:16px; text-align:left; cursor:pointer;">
-      <img data-slot="oferta-gym" src="assets/oferta-gym.png" alt="6 meses de treino exclusivo" style="width:140px; flex:none; align-self:stretch; min-height:150px; object-fit:cover; object-position:50% 50%; display:block;">
-      <div style="padding:18px 16px; flex:1;">
-        <i data-lucide="calendar-check" width="22" height="22" style="color:var(--c-primary);"></i>
-        <h3 style="margin:8px 0 6px; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.5px;"><span data-text="svc-oferta-t1">6 MESES DE</span> <span style="color:var(--c-primary);" data-text="svc-oferta-t2">TREINO EXCLUSIVO</span></h3>
-        <p style="margin:0 0 12px; font-size:12.5px; color:#A9A399; line-height:1.5;"><span data-text="svc-oferta-desc">Todos os protocolos de treino em um só acesso, por 6 meses.</span></p>
-        <span style="font-family:'Oswald',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.5px; color:var(--c-primary); display:inline-flex; align-items:center; gap:6px;"><span data-text="svc-oferta-cta">VER PROTOCOLOS</span> <i data-lucide="arrow-right" width="14" height="14"></i></span>
-      </div>
-    </div>
+
     <!-- Card: Nutricional (Em breve) -->
     <div data-detail="nutricional" style="display:flex; align-items:center; gap:0; background:linear-gradient(135deg,var(--c-si),var(--c-sj)); border:1px solid rgba(var(--c-primary-rgb),0.20); border-radius:14px; overflow:hidden; margin-bottom:16px; text-align:left; cursor:pointer; min-height:142px;">
       <div style="width:130px; flex:none; align-self:stretch; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
@@ -538,16 +529,7 @@
           <span style="font-family:'Oswald',sans-serif; font-weight:600; font-size:12px; letter-spacing:1.5px; color:var(--c-primary); display:inline-flex; align-items:center; gap:8px;">SAIBA MAIS <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
         </div>
       </div>
-      <!-- 6 Meses (protocolos) -->
-      <div data-nav="programas" style="position:relative; display:flex; min-height:230px; background:linear-gradient(135deg,var(--c-sa),var(--c-sb)); border:1.5px solid rgba(var(--c-primary-rgb),0.5); border-radius:16px; overflow:hidden; cursor:pointer;">
-        <img data-slot="oferta-gym" src="assets/oferta-gym.png" alt="6 meses de treino exclusivo" style="width:40%; flex:none; align-self:stretch; object-fit:cover; object-position:50% 50%; display:block;">
-        <div style="flex:1; padding:30px;">
-          <div style="width:46px; height:46px; border-radius:12px; background:rgba(var(--c-primary-rgb),0.1); border:1px solid rgba(var(--c-primary-rgb),0.4); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><i data-lucide="calendar-check" width="24" height="24" style="color:var(--c-primary);"></i></div>
-          <h3 style="margin:0 0 10px; font-family:'Oswald',sans-serif; font-weight:600; font-size:24px;"><span data-text="svc-oferta-t1">6 MESES DE</span> <span style="color:var(--c-primary);" data-text="svc-oferta-t2">TREINO EXCLUSIVO</span></h3>
-          <p style="margin:0 0 18px; font-size:14px; color:#A9A399; line-height:1.6;"><span data-text="svc-oferta-desc">Todos os protocolos de treino em um só acesso, por 6 meses.</span></p>
-          <span style="font-family:'Oswald',sans-serif; font-weight:600; font-size:12px; letter-spacing:1.5px; color:var(--c-primary); display:inline-flex; align-items:center; gap:8px;"><span data-text="svc-oferta-cta">VER PROTOCOLOS</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-        </div>
-      </div>
+
       <!-- Nutricional -->
       <div data-detail="nutricional" style="position:relative; grid-column:1/-1; display:flex; align-items:center; min-height:230px; background:linear-gradient(135deg,var(--c-si),var(--c-sj)); border:1px solid rgba(var(--c-primary-rgb),0.18); border-radius:16px; overflow:hidden; cursor:pointer;">
         <div style="width:40%; flex:none; align-self:stretch; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;">
@@ -864,10 +846,9 @@ var DETAILS = {
     features: [
       { icon: 'flame', label: 'PROTOCOLO COMPLETO', sub: 'Feito para queima de gordura.' },
       { icon: 'dumbbell', label: 'TREINOS ESTRATÉGICOS', sub: 'Volume e intensidade na medida certa.' },
-      { icon: 'utensils', label: 'ORIENTAÇÃO PARA DIETA', sub: 'Direção alimentar prática no dia a dia.' },
-      { icon: 'target', label: 'MÉTODOS AVANÇADOS', sub: 'Técnicas que aceleram seus resultados.' },
+      { icon: 'utensils', label: 'ORIENTAÇÃO ALIMENTAR', sub: 'Direção alimentar prática no dia a dia.' },
+      { icon: 'target', label: 'MÉTODOS AVANÇADOS PARA O EMAGRECIMENTO', sub: 'Técnicas que aceleram a queima de gordura.' },
       { icon: 'calendar', label: 'PERIODIZAÇÃO COMPLETA', sub: 'Evolução planejada semana a semana.' },
-      { icon: 'trending-up', label: 'ACOMPANHAMENTO E PROGRESSÃO', sub: 'Ajustes conforme você evolui.' },
       { icon: 'calendar-check', label: '6 MESES DE TREINO', sub: 'O programa completo da sua transformação.' }
     ],
     cta: 'QUERO O FIT SLIM', ctaNote: 'R$ 96 à vista ou 6x de R$ 16 — desbloqueie a sua melhor versão.', img: 'assets/poster-fitslim.png', msg: 'Olá, Lucas! Quero começar o programa FIT SLIM.' },
@@ -875,9 +856,10 @@ var DETAILS = {
     featuresTitle: 'O QUE ESTÁ INCLUSO',
     features: [
       { icon: 'target', label: 'FOCO TOTAL NOS GLÚTEOS', sub: 'Exercícios selecionados para ativar todas as regiões do glúteo.' },
-      { icon: 'dumbbell', label: 'TREINOS ESTRUTURADOS', sub: 'Planilhas completas, progressivas e periodizadas.' },
       { icon: 'calendar-check', label: '6 MESES DE TREINO', sub: 'Programação completa para 6 meses de evolução contínua.' },
-      { icon: 'smartphone', label: 'ACESSO PELO APLICATIVO', sub: 'Treine onde e quando quiser com o aplicativo MFIT Personal.' },
+      { icon: 'flame', label: 'PROTOCOLO COMPLETO', sub: 'Treino completo do início ao fim, sem faltar nada.' },
+      { icon: 'zap', label: 'MÉTODOS AVANÇADOS', sub: 'Técnicas que aceleram o crescimento e a definição.' },
+      { icon: 'calendar', label: 'PERIODIZAÇÃO COMPLETA', sub: 'Evolução planejada semana a semana.' },
       { icon: 'trending-up', label: 'EVOLUÇÃO GARANTIDA', sub: 'Métodos inteligentes para sobrecarga progressiva e resultados reais.' }
     ],
     cta: 'QUERO O GLUTE MAX', ctaNote: 'R$ 96 à vista ou 6x de R$ 16 — comece agora sua transformação.', img: 'assets/poster-glutemax.png', msg: 'Olá, Lucas! Quero começar o GLUTE MAX.' },
@@ -885,34 +867,34 @@ var DETAILS = {
     featuresTitle: 'O QUE ESTÁ INCLUSO',
     features: [
       { icon: 'dumbbell', label: 'FOCO TOTAL EM FORÇA', sub: 'Treinos desenvolvidos para aumentar sua força máxima em todos os movimentos.' },
-      { icon: 'trending-up', label: 'PROGRESSÃO INTELIGENTE', sub: 'Sobrecarga progressiva planejada para evolução constante e segura.' },
+      { icon: 'trending-up', label: 'PROGRESSÃO DE CARGA INTELIGENTE', sub: 'Sobrecarga progressiva planejada para evolução constante e segura.' },
       { icon: 'zap', label: 'MAIS PERFORMANCE', sub: 'Ganhe força, potência e desempenho dentro e fora da academia.' },
       { icon: 'calendar-check', label: '6 MESES DE TREINO', sub: 'Programação completa para 6 meses de evolução contínua e consistente.' },
-      { icon: 'smartphone', label: 'ACESSO PELO APLICATIVO', sub: 'Treine onde e quando quiser com o aplicativo MFIT Personal.' },
-      { icon: 'shield-check', label: 'RESULTADOS REAIS', sub: 'Métodos testados e aprovados para quem leva o treino a sério.' }
+      { icon: 'shield-check', label: 'RESULTADOS DE FORÇA REAIS', sub: 'Métodos testados e aprovados para quem leva o treino a sério.' }
     ],
     cta: 'QUERO O GORILLA', ctaNote: 'R$ 96 à vista ou 6x de R$ 16 — comece agora sua evolução.', img: 'assets/poster-gorilla.png', msg: 'Olá, Lucas! Quero começar o GORILLA STRENGTH.' },
   pump100: { kicker: 'HIPERTROFIA', title: 'PUMP 100', desc: 'Treinos metabólicos e de alto volume desenvolvidos para gerar o máximo de estímulo muscular e acelerar seus resultados.', points: [],
     featuresTitle: 'O QUE ESTÁ INCLUSO',
     features: [
-      { icon: 'flame', label: 'FOCO NO PUMP', sub: 'Treinos desenhados para gerar alto estresse metabólico e máxima congestão muscular.' },
-      { icon: 'zap', label: 'METABÓLICO E INTENSO', sub: 'Acelere a queima de gordura enquanto constrói músculos mais definidos.' },
-      { icon: 'dumbbell', label: 'TREINOS ESTRUTURADOS', sub: 'Planilhas completas, progressivas e periodizadas para todos os níveis de treino.' },
+      { icon: 'flame', label: 'FOCO NO PUMP MUSCULAR', sub: 'Treinos desenhados para gerar alto estresse metabólico e máxima congestão muscular.' },
+      { icon: 'zap', label: 'MÉTODOS METABÓLICOS E INTENSOS', sub: 'Acelere a queima de gordura enquanto constrói músculos mais definidos.' },
+      { icon: 'dumbbell', label: 'ROTINAS DE TREINOS', sub: 'Planilhas completas, progressivas e periodizadas para todos os níveis de treino.' },
       { icon: 'calendar-check', label: '6 MESES DE TREINO', sub: 'Programação completa para 6 meses de evolução contínua e consistente.' },
-      { icon: 'smartphone', label: 'ACESSO PELO APLICATIVO', sub: 'Treine onde e quando quiser com o aplicativo MFIT Personal.' },
-      { icon: 'trending-up', label: 'RESULTADOS VISÍVEIS', sub: 'Mais definição, músculos mais cheios e corpo mais condicionado.' }
+      { icon: 'trending-up', label: 'RESULTADOS VISÍVEIS', sub: 'Mais definição, músculos mais cheios e corpo mais condicionado.' },
+      { icon: 'calendar', label: 'PERIODIZAÇÃO COMPLETA', sub: 'Evolução planejada semana a semana.' },
+      { icon: 'target', label: 'MÉTODOS AVANÇADOS PARA A HIPERTROFIA', sub: 'Técnicas que aceleram o ganho de massa muscular.' }
     ],
     cta: 'QUERO O PUMP 100', ctaNote: 'R$ 96 à vista ou 6x de R$ 16 — comece agora sua transformação.', img: 'assets/poster-pump100.png', msg: 'Olá, Lucas! Quero começar o PUMP 100.' },
   hybridpro: { kicker: 'FORÇA + CONDICIONAMENTO', title: 'HYBRID PRO', desc: 'O protocolo completo que combina treinos de força e cardio estratégico para aumentar sua performance, queimar gordura e construir um físico forte e definido.', points: [],
     featuresTitle: 'O QUE ESTÁ INCLUSO',
     features: [
       { icon: 'activity', label: 'TREINO HÍBRIDO INTELIGENTE', sub: 'Combinação estratégica de treinos de força e exercícios cardiovasculares.' },
-      { icon: 'heart-pulse', label: 'MAIS CONDICIONAMENTO', sub: 'Melhore seu fôlego, resistência e disposição para o dia a dia e para os treinos.' },
-      { icon: 'flame', label: 'QUEIMA DE GORDURA', sub: 'Acelere o metabolismo e aumente o gasto calórico dentro e fora do treino.' },
-      { icon: 'dumbbell', label: 'FORÇA E DEFINIÇÃO', sub: 'Mantenha e ganhe massa muscular enquanto reduz gordura corporal e define o corpo.' },
+      { icon: 'heart-pulse', label: 'MAIS CONDICIONAMENTO AERÓBICO', sub: 'Melhore seu fôlego, resistência e disposição para o dia a dia e para os treinos.' },
+      { icon: 'flame', label: 'MAIS QUEIMA DE GORDURA', sub: 'Acelere o metabolismo e aumente o gasto calórico dentro e fora do treino.' },
+      { icon: 'dumbbell', label: 'MAIS RESISTÊNCIA E FORÇA MUSCULAR', sub: 'Mantenha e ganhe massa muscular enquanto reduz gordura corporal e define o corpo.' },
+      { icon: 'calendar', label: 'PERIODIZAÇÃO COMPLETA', sub: 'Evolução planejada semana a semana.' },
       { icon: 'calendar-check', label: '6 MESES DE TREINO', sub: 'Programação completa para 6 meses de evolução contínua e consistente.' },
-      { icon: 'smartphone', label: 'ACESSO PELO APLICATIVO', sub: 'Treine onde e quando quiser com o aplicativo MFIT Personal.' },
-      { icon: 'trending-up', label: 'EVOLUÇÃO GARANTIDA', sub: 'Métodos progressivos e periodizados para resultados reais e duradouros.' }
+      { icon: 'smartphone', label: 'EVOLUÇÃO NA PALMA DA MÃO', sub: 'Veja sua evolução refletida a cada semana de treino.' }
     ],
     cta: 'QUERO O HYBRID PRO', ctaNote: 'R$ 96 à vista ou 6x de R$ 16 — comece agora sua transformação.', img: 'assets/poster-hybridpro.png', msg: 'Olá, Lucas! Quero começar o HYBRID PRO.' },
   consultoriapremium: { kicker: 'ONLINE', title: 'CONSULTORIA PREMIUM', desc: 'Acompanhamento individualizado 100% online com suporte diário e ajustes estratégicos.', points: ['Suporte diário com o Lucas', 'Ajustes estratégicos contínuos', 'Plano de treino e dieta', 'Acompanhamento premium pelo aplicativo'], cta: 'VER CONSULTORIA ONLINE', ctaGoto: 'detail:consultoria', ctaNote: 'Conheça o plano completo da Consultoria Online.', img: 'assets/prog-premium.png', msg: 'Olá, Lucas! Tenho interesse na Consultoria Premium. Ainda há vagas?' },

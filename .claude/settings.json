@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -lt --time-style=\"+%Y-%m-%d %H:%M\" /c/Users/Brendo/Downloads/*.jpg /c/Users/Brendo/Downloads/*.png 2>/dev/null | head -12)",
+      "Read(//c/Users/Brendo/Downloads/**)",
+      "Bash(cp \"/c/Users/Brendo/Downloads/7963a7f4-a170-4278-87d0-94ceda12c6f9.jpg\" assets/sobre.jpg)",
+      "Bash(cp \"/c/Users/Brendo/Downloads/3834b6b6-c72e-4446-b726-16a0096d22f1.jpg\" assets/sobre-alt.jpg)",
+      "Bash(node -e ' *)",
+      "mcp__claude_ai_Higgsfield__generate_image",
+      "mcp__claude_ai_Higgsfield__job_status",
+      "Bash(node -e \"setTimeout\\(\\(\\) => console.log\\('aguardei 45s pela fila do Higgsfield'\\), 45000\\)\")",
+      "Bash(node -e \"setTimeout\\(\\(\\) => console.log\\('aguardei mais 90s'\\), 90000\\)\")",
+      "Bash(node -e \"setTimeout\\(\\(\\) => console.log\\('ok'\\), 90000\\)\")",
+      "Bash(node -e \"setTimeout\\(\\(\\) => console.log\\('ok'\\), 30000\\)\")",
+      "Bash(mv \"assets/FIT SLIM.png\" assets/fitslim-transform-v2.png)",
+      "Bash(cp assets/poster-consultoria.png assets/poster-consultoria-old.png.bak)",
+      "Bash(cp assets/consultoriaonline.png assets/poster-consultoria.png)"
+    ]
+  }
+}
